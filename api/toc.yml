@@ -1,2 +1,81 @@
-- name: TO BE REPLACED
-  href: index.md
+### YamlMime:TableOfContent
+- uid: Loot
+  name: Loot
+  items:
+  - uid: Loot.Bag
+    name: Bag
+  - uid: Loot.Drop
+    name: Drop
+  - uid: Loot.DropTable
+    name: DropTable
+  - uid: Loot.InternalSingleton`1
+    name: InternalSingleton<T>
+    name.vb: InternalSingleton(Of T)
+  - uid: Loot.Loot
+    name: Loot
+  - uid: Loot.LootSettings
+    name: LootSettings
+- uid: Loot.Context
+  name: Loot.Context
+  items:
+  - uid: Loot.Context.AfterDropContext
+    name: AfterDropContext
+  - uid: Loot.Context.BeforeDropContext
+    name: BeforeDropContext
+  - uid: Loot.Context.DropContext
+    name: DropContext
+  - uid: Loot.Context.FilterContext
+    name: FilterContext
+  - uid: Loot.Context.FilteredContext
+    name: FilteredContext
+  - uid: Loot.Context.ModifiedAndFilteredContext
+    name: ModifiedAndFilteredContext
+  - uid: Loot.Context.ModifiedContext
+    name: ModifiedContext
+  - uid: Loot.Context.ModifyContext
+    name: ModifyContext
+- uid: Loot.Data
+  name: Loot.Data
+  items:
+  - uid: Loot.Data.DropSaveData
+    name: DropSaveData
+  - uid: Loot.Data.DropTableSaveData
+    name: DropTableSaveData
+- uid: Loot.Editor
+  name: Loot.Editor
+  items:
+  - uid: Loot.Editor.SettingsWindow
+    name: SettingsWindow
+- uid: Loot.Enum
+  name: Loot.Enum
+  items:
+  - uid: Loot.Enum.PercentageCalculation
+    name: PercentageCalculation
+- uid: Loot.Extensions
+  name: Loot.Extensions
+  items:
+  - uid: Loot.Extensions.Extensions
+    name: Extensions
+- uid: Loot.Params
+  name: Loot.Params
+  items:
+  - uid: Loot.Params.LoadParams
+    name: LoadParams
+  - uid: Loot.Params.SaveParams
+    name: SaveParams
+- uid: Loot.Utilities
+  name: Loot.Utilities
+  items:
+  - uid: Loot.Utilities.CustomExtensions
+    name: CustomExtensions
+  - uid: Loot.Utilities.Messages
+    name: Messages
+  - uid: Loot.Utilities.Messages.Error
+    name: Messages.Error
+  - uid: Loot.Utilities.Messages.Exceptions
+    name: Messages.Exceptions
+  - uid: Loot.Utilities.Messages.Tests
+    name: Messages.Tests
+  - uid: Loot.Utilities.SingletonScriptableObject`1
+    name: SingletonScriptableObject<T>
+    name.vb: SingletonScriptableObject(Of T)
