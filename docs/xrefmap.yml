@@ -1609,3 +1609,6 @@ references:
   fullName.vb: Loot.Utilities.SingletonScriptableObject(Of T).Instance
   nameWithType: SingletonScriptableObject<T>.Instance
   nameWithType.vb: SingletonScriptableObject(Of T).Instance
+- uid: manual.md
+  name: Loot - A drop table solution
+  href: index.html

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>This is the HOMEPAGE. </title>
+    <title>Loot - A drop table solution </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="This is the HOMEPAGE. ">
+    <meta name="title" content="Loot - A drop table solution ">
     <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="favicon.ico">
@@ -58,15 +58,138 @@
       <div role="main" class="container body-content hide-when-search">
         <div class="article row grid">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
-<h1 id="this-is-the-homepage">This is the <strong>HOMEPAGE</strong>.</h1>
+            <article class="content wrap" id="_content" data-uid="manual.md">
+<h1 id="loot---a-drop-table-solution">Loot - A drop table solution</h1>
 
-<p>Refer to <a href="http://daringfireball.net/projects/markdown/">Markdown</a> for how to write markdown files.</p>
-<h2 id="quick-start-notes">Quick Start Notes:</h2>
+<p>First of all, thanks for buying and supporting my work, I'm trying my best to keep updating this asset whenever I can, I hope that it helps you to bring your dream game to life, and please if you have some suggestions, critique or question does not hesitate to enter in contact through email or discord.</p>
+<p><strong>Developer contact</strong></p>
+<ul>
+<li>Email: joao.gavron@gmail.com</li>
+<li>Discord: Nefisto#3403</li>
+</ul>
+<p>doc version: 1.2</p>
+<hr>
+<h2 id="architecture">Architecture</h2>
+<p>I tried to make the plugin as accessible as possible so here we will take a look about how the asset is organized</p>
+<p>This user guide was designed to provide you with the necessary information to fully understand how this plugin work. You can also find a small guide to demo inside the Demo folder that will provide you with an explanation about what each sample tries to demonstrate, it's a good way to understand it by looking directly at the commented code. ATM I'm working at a web scripting API reference, so if you are getting trouble understanding some specific API, just hit me up in discord and I'll try my best to help you.</p>
+<hr>
+<h1 id="quick-start">Quick start</h1>
+<p>Steps to use the Loot plugin:</p>
 <ol>
-<li>Add images to the <em>images</em> folder if the file is referencing an image.</li>
+<li><p>Import Loot plugin from package manager</p>
+</li>
+<li><p><strong>Right-click -&gt; Create -&gt; Loot -&gt; New table</strong></p>
+</li>
+<li><p>Configure your table</p>
+</li>
+<li>
+<ol>
+<li>Chose a <strong>kind</strong> based on what you're planning to do</li>
+<li>[Optional] Set a custom logic (let it to none and the default logic will be used)</li>
+<li>Add your drops in <strong>Drops</strong> list</li>
 </ol>
-</article>
+</li>
+<li><p>Create a reference to your table in your desired script with public DropTable myTable</p>
+</li>
+<li><p>Call the desired API using your reference var bag = myTable.Drop(), all of them will return a bag</p>
+</li>
+<li><p>Your bag contains your drop, so you can iterate over your bag to do what you want with your loot</p>
+</li>
+</ol>
+<p>OBS: Drop table implement IEnumerable<drop> and run these events inside it, so if you try to do some LINQ inside some event you will end with a stack overflow error, this is why every event give to you a list of modified drops.<p>
+<hr>
+<h2 id="system-components-overview">System components overview</h2>
+<p>Let's understand how the system was been architectured, we have five core classes to cover:</p>
+<ul>
+<li><strong>Drop table:</strong> This is our main container that will contain our drops, percentages, and amounts, together with extra information. It's a scriptable object that can be created on right-click context - <strong>right-click -&gt; Create -&gt; Drops -&gt; New Table</strong> - and control almost every aspect of our drops. This has not only our drops but also our callbacks, modifier, and filters (we will talk more about this in the specific section), and it's from where you will request drops.</li>
+<li><strong>Drops:</strong> This represents your drop by itself, controlling things like your entry, percentage (in the simple and weighted scenario), amount variation, and some other settings. This exists only inside the context of a <em>Drop table</em>.</li>
+<li><strong>Bag:</strong> When you request a drop from your <em>Drop table</em> you will get a Bag as result, and this will contain your randomized drops.</li>
+<li><strong>Loot:</strong> When you iterate over Bag you'll get Loots, It is a limited vision of Drop that contains only the entry and a collapsed amount (by collapsed I mean, if your drop entry-amount can vary between 2 and 5, a loot will have a number between 2 and 5).</li>
+<li><strong>Logic:</strong> This is the logic that will run in the background when you call for a drop using the <em>Drop Table</em>, you can inject this on each table or can use the default one that provides one version for each weighted and simple table.</li>
+</ul>
+<p><strong>So the flow was planned to be something like this:</strong> You will create a <em>Drop Table</em> and fill it with your <em>Drops</em>, then you can ask for a drop from your table that will run the default or custom <em>Logic</em> and you will receive a <em>Bag</em> as result, then you can iterate over your bag getting the <em>Loot</em> version of drops and populating what you were originally working on.</p>
+<p>Together with classes I also want to talk about three concepts that reside in the plugin:</p>
+<ul>
+<li><strong>Drop table kind:</strong> In drop table inspector we can see an enum field called drop table kind. This field will change the way that drop percentage/chance is calculated</li>
+</ul>
+<ul>
+<li>
+<ul>
+<li><strong>Simple:</strong> Each drop has its percentage individually, this means that when we ask for a drop, the table will try to drop each drop individually. For example, suppose that we have two drops A and B, and each one has 50% to be dropped, when we ask for a drop, our result bag can have A, A and B, B or nothing (empty bag), also changing percentage of one item will not interfere in another item percentage.</li>
+<li><strong>Weighted:</strong> The percentage of each drop depends on the sum of the weight of each item, and the sum of all percentages should always be 100%, this also means that when we ask for a drop the table will give to us only one drop from the list. For example, continuing with our A and B example, if each one weights 1, this means that each has 50% to be dropped, our result bag possibilities are A or B, also if we change our B to weight 2 this will make our A change from 50% to 33% and our B change from 50% to 66%.</li>
+</ul>
+</li>
+<li><p><strong>Modifier:</strong> This represents temporary changes that we apply to our drops in runtime that allow us to change drops properties based on custom conditions. For example, increase the drop percentage of consumables based on my sugar eat skill level. Modifiers can be applied in a global or local context, the order runs as the following:</p>
+<p>​	<strong>Global modify</strong> =&gt; <strong>Global modified</strong> =&gt; <strong>Local modify</strong> =&gt; <strong>Local modified</strong> =&gt; (<strong>Filter part</strong>)</p>
+<p>OBS: xxxModify happen for every item while xxxModified happen one time, so if your modify condition depends on some value that needs to be counted every time, use the modified event version</p>
+<ul>
+<li><strong>Global modify:</strong>
+<ul>
+<li>It's raised one time for every drop.</li>
+<li>It's shared between all tables.</li>
+<li>It's an Action<modifyeventargs></modifyeventargs></li>
+</ul>
+</li>
+<li><strong>Global modified:</strong>
+<ul>
+<li>It's raised one time, after all, modify actions finished being applied.</li>
+<li>It's shared between all tables.</li>
+<li>It's an Action<modifiedeventargs></modifiedeventargs></li>
+</ul>
+</li>
+<li><strong>Local modify:</strong>
+<ul>
+<li>It's raised one time for every drop.</li>
+<li>It's individual to each table.</li>
+<li>It's an Action<modifyeventargs></modifyeventargs></li>
+</ul>
+</li>
+<li><strong>Local modified:</strong>
+<ul>
+<li>It's raised one time, after all, modify finished being applied.</li>
+<li>It's individual to each table.</li>
+<li>It's an Action<modifiedeventargs>.</modifiedeventargs></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Filter drops:</strong> This will allow us to temporarily filter our drops. For example, in N attempt make sure that users receive at least one of this specific item type in their drop. Filters happen after the modifiers was applied, this means that your condition is based on a modified version of your table.</p>
+<ul>
+<li><strong>Filter:</strong> This will remove the drop from the collection if ANY listener returns false.
+<ul>
+<li>It's raised one time for every drop.</li>
+<li>It's individual to each table.</li>
+<li>It's an Predicate<filtereventargs>.</filtereventargs></li>
+</ul>
+</li>
+<li><strong>Filtered:</strong> It's the last thing to be applied, so the list of drops at this point is already modified and filtered
+<ul>
+<li>It's raised one time.</li>
+<li>It's individual to each table.</li>
+<li>It's an Action<filteredeventargs>.</filteredeventargs></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="manual">Manual</h1>
+<h2 id="saveload">Save/Load:</h2>
+<blockquote>
+<p>We have an example scene with a simple and complex case in <strong>Samples -&gt; SaveLoad demo</strong>, I tried to comment on every important part, but if something sounds strange to you, do not hesitate to enter in contact using discord provided at the start of this document.</p>
+<p>For <strong>simple</strong> case look at: <strong>Samples -&gt; SaveLoad demo -&gt; Scripts -&gt; SaveLoad.cs</strong> methods <strong>Simplest Save</strong> and <strong>Simplest Load</strong>
+For <strong>complex</strong> case look at: <strong>Samples -&gt; SaveLoad demo -&gt; Scripts -&gt; SaveLoad.cs</strong> methods <strong>Complex Save</strong> and <strong>Complex Load</strong></p>
+</blockquote>
+<p>​	Sometimes when using runtime clone tables is necessary to keep their modified values between runs, for example, if the player can get random cards from a box and the got cards were removed from the box we need to keep the current state of the box between runs, with this kind of scenario in mind we made some API's to simplify the process.</p>
+<p>​	We'll box and unbox our necessary information inside a custom class made to be serialized, the <strong>DropTableSaveData</strong>, this class is what you'll get from saving and what you'll use to load your tables. We've made this feature thinking in two cases:</p>
+<ol>
+<li><strong>Simple case:</strong> Your changes made in the runtime table is all about their values (percentage, weight, drop amount variation, etc...) and/or removing entries</li>
+<li><strong>Complex case:</strong>  You've added new entries that do not exist in the original table and/or change entry values (read change the entry reference in runtime) to a custom one that also does not exist in the original table</li>
+</ol>
+<p>In a nutshell, if you can restore your runtime table state going from the original table, you'll probably need just the simple case and otherwise the complex case.</p>
+<p><strong>IMPORTANT NOTE 1:</strong> Keep in mind that we will load values to an existing runtime table, so you are responsible to recreate a clone table from your original table.</p>
+<p><strong>IMPORTANT NOTE 2:</strong> Modifiers/filters ARE NOT serialized, so you must get it from the original table and/or re-add any custom modifier/filter added in some kind of setup stage.</p>
+</drop></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
