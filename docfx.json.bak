@@ -5,9 +5,9 @@
         {
           "files": [
             "Loot_Scripts.csproj"
-          ]
-        },
-		"src": "../"
+          ],
+		  "src": "../"
+        }
       ],
       "dest": "api",
       "disableGitFeatures": false,

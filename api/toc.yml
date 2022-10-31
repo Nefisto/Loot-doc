@@ -8,9 +8,6 @@
     name: Drop
   - uid: Loot.DropTable
     name: DropTable
-  - uid: Loot.InternalSingleton`1
-    name: InternalSingleton<T>
-    name.vb: InternalSingleton(Of T)
   - uid: Loot.Loot
     name: Loot
   - uid: Loot.LootSettings
@@ -68,6 +65,9 @@
   items:
   - uid: Loot.Utilities.CustomExtensions
     name: CustomExtensions
+  - uid: Loot.Utilities.InternalSingleton`1
+    name: InternalSingleton<T>
+    name.vb: InternalSingleton(Of T)
   - uid: Loot.Utilities.Messages
     name: Messages
   - uid: Loot.Utilities.Messages.Error

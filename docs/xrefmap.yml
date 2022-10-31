@@ -1001,12 +1001,6 @@ references:
   isSpec: "True"
   fullName: Loot.DropTable.DeepEquals
   nameWithType: DropTable.DeepEquals
-- uid: Loot.DropTable.description
-  name: description
-  href: api/Loot.DropTable.html#Loot_DropTable_description
-  commentId: F:Loot.DropTable.description
-  fullName: Loot.DropTable.description
-  nameWithType: DropTable.description
 - uid: Loot.DropTable.Drop(System.Action{Loot.Context.BeforeDropContext},System.Func{System.Collections.Generic.List{Loot.Drop},Loot.Bag},System.Action{Loot.Context.AfterDropContext},System.Boolean)
   name: Drop(Action<BeforeDropContext>, Func<List<Drop>, Bag>, Action<AfterDropContext>, Boolean)
   href: api/Loot.DropTable.html#Loot_DropTable_Drop_System_Action_Loot_Context_BeforeDropContext__System_Func_System_Collections_Generic_List_Loot_Drop__Loot_Bag__System_Action_Loot_Context_AfterDropContext__System_Boolean_
@@ -1191,6 +1185,12 @@ references:
   fullName: Loot.DropTable.System.Collections.IEnumerable.GetEnumerator
   nameWithType: DropTable.IEnumerable.GetEnumerator
   nameWithType.vb: DropTable.System.Collections.IEnumerable.GetEnumerator
+- uid: Loot.DropTable.tableDescription
+  name: tableDescription
+  href: api/Loot.DropTable.html#Loot_DropTable_tableDescription
+  commentId: F:Loot.DropTable.tableDescription
+  fullName: Loot.DropTable.tableDescription
+  nameWithType: DropTable.tableDescription
 - uid: Loot.DropTable.tableIcon
   name: tableIcon
   href: api/Loot.DropTable.html#Loot_DropTable_tableIcon
@@ -1296,23 +1296,6 @@ references:
   isSpec: "True"
   fullName: Loot.Extensions.Extensions.If
   nameWithType: Extensions.If
-- uid: Loot.InternalSingleton`1
-  name: InternalSingleton<T>
-  href: api/Loot.InternalSingleton-1.html
-  commentId: T:Loot.InternalSingleton`1
-  name.vb: InternalSingleton(Of T)
-  fullName: Loot.InternalSingleton<T>
-  fullName.vb: Loot.InternalSingleton(Of T)
-  nameWithType: InternalSingleton<T>
-  nameWithType.vb: InternalSingleton(Of T)
-- uid: Loot.InternalSingleton`1._instance
-  name: _instance
-  href: api/Loot.InternalSingleton-1.html#Loot_InternalSingleton_1__instance
-  commentId: F:Loot.InternalSingleton`1._instance
-  fullName: Loot.InternalSingleton<T>._instance
-  fullName.vb: Loot.InternalSingleton(Of T)._instance
-  nameWithType: InternalSingleton<T>._instance
-  nameWithType.vb: InternalSingleton(Of T)._instance
 - uid: Loot.Loot
   name: Loot
   href: api/Loot.Loot.html
@@ -1513,6 +1496,23 @@ references:
   fullName.vb: Loot.Utilities.CustomExtensions.ForEach(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Action(Of T))
   nameWithType: CustomExtensions.ForEach<T>(IEnumerable<T>, Action<T>)
   nameWithType.vb: CustomExtensions.ForEach(Of T)(IEnumerable(Of T), Action(Of T))
+- uid: Loot.Utilities.InternalSingleton`1
+  name: InternalSingleton<T>
+  href: api/Loot.Utilities.InternalSingleton-1.html
+  commentId: T:Loot.Utilities.InternalSingleton`1
+  name.vb: InternalSingleton(Of T)
+  fullName: Loot.Utilities.InternalSingleton<T>
+  fullName.vb: Loot.Utilities.InternalSingleton(Of T)
+  nameWithType: InternalSingleton<T>
+  nameWithType.vb: InternalSingleton(Of T)
+- uid: Loot.Utilities.InternalSingleton`1._instance
+  name: _instance
+  href: api/Loot.Utilities.InternalSingleton-1.html#Loot_Utilities_InternalSingleton_1__instance
+  commentId: F:Loot.Utilities.InternalSingleton`1._instance
+  fullName: Loot.Utilities.InternalSingleton<T>._instance
+  fullName.vb: Loot.Utilities.InternalSingleton(Of T)._instance
+  nameWithType: InternalSingleton<T>._instance
+  nameWithType.vb: InternalSingleton(Of T)._instance
 - uid: Loot.Utilities.Messages
   name: Messages
   href: api/Loot.Utilities.Messages.html
