@@ -38,44 +38,8 @@
     name: DropSaveData
   - uid: Loot.Data.DropTableSaveData
     name: DropTableSaveData
-- uid: Loot.Editor
-  name: Loot.Editor
-  items:
-  - uid: Loot.Editor.SettingsWindow
-    name: SettingsWindow
 - uid: Loot.Enum
   name: Loot.Enum
   items:
   - uid: Loot.Enum.PercentageCalculation
     name: PercentageCalculation
-- uid: Loot.Extensions
-  name: Loot.Extensions
-  items:
-  - uid: Loot.Extensions.Extensions
-    name: Extensions
-- uid: Loot.Params
-  name: Loot.Params
-  items:
-  - uid: Loot.Params.LoadParams
-    name: LoadParams
-  - uid: Loot.Params.SaveParams
-    name: SaveParams
-- uid: Loot.Utilities
-  name: Loot.Utilities
-  items:
-  - uid: Loot.Utilities.CustomExtensions
-    name: CustomExtensions
-  - uid: Loot.Utilities.InternalSingleton`1
-    name: InternalSingleton<T>
-    name.vb: InternalSingleton(Of T)
-  - uid: Loot.Utilities.Messages
-    name: Messages
-  - uid: Loot.Utilities.Messages.Error
-    name: Messages.Error
-  - uid: Loot.Utilities.Messages.Exceptions
-    name: Messages.Exceptions
-  - uid: Loot.Utilities.Messages.Tests
-    name: Messages.Tests
-  - uid: Loot.Utilities.SingletonScriptableObject`1
-    name: SingletonScriptableObject<T>
-    name.vb: SingletonScriptableObject(Of T)

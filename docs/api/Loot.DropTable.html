@@ -294,9 +294,9 @@ public string tableDescription</code></pre>
   
   
   <h4 id="Loot_DropTable_tableIcon" data-uid="Loot.DropTable.tableIcon">tableIcon</h4>
-  <div class="markdown level1 summary"><p>Provide an icon to the table.</p>
+  <div class="markdown level1 summary"><p>Provide an icon to the table.
 <p>
-<p>It`s normally used when you want to list the table as a drop in some list.</p>
+<p>It`s normally used when you want to list the table as a drop in some list.</p></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -728,7 +728,7 @@ drops</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Loot.Params.LoadParams.html">LoadParams</a></td>
+        <td><span class="xref">Loot.Params.LoadParams</span></td>
         <td><span class="parametername">loadParams</span></td>
         <td><p>Callbacks to recovery your table and drops</p>
 </td>
@@ -752,16 +752,11 @@ drops</p>
     </tbody>
   </table>
   <h5 id="Loot_DropTable_Load_Loot_Data_DropTableSaveData_Loot_Params_LoadParams__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><div class="NOTE">
-<h5>Note</h5>
-<p>Your table will be cloned inside this method, so just pass a way to recovery original table</p>
+  <div class="markdown level1 remarks"><div class="NOTE"><h5>Note</h5><p>Your table will be cloned inside this method, so just pass a way to recovery original table</p>
 </div>
 </div>
   <h5 id="Loot_DropTable_Load_Loot_Data_DropTableSaveData_Loot_Params_LoadParams__examples">Examples</h5>
-  <div class="NOTE">
-<h5>Note</h5>
-<p>This example came from Save/Load demo scene with minor modification</p>
-</div>
+  <div class="NOTE"><h5>Note</h5><p>This example came from Save/Load demo scene with minor modification
 <pre><code class="lang-cs">public void Load()
 {
 // We will get our saved JSON from file and remove the possible pretty print
@@ -771,29 +766,27 @@ using (var sr = new StreamReader(Application.persistentDataPath + &quot;/save.js
     var line = &quot;&quot;;
     while ((line = sr.ReadLine()) != null)
         savedJson += line;
-}
-
-// Create our data
-var savedData = JsonUtility.FromJson&lt;DropTableSaveData>(savedJson);
-
-// Then we recovery our table
+}<p>
+</code></pre></div>
+<p>// Create our data
+var savedData = JsonUtility.FromJson&lt;DropTableSaveData&gt;(savedJson);</p>
+<p>// Then we recovery our table
 // In this case our tables and items are being stored by resources
 tableOwner.runtimeTable = DropTable.Load(savedData, new LoadParams 
 {
-    deserializeTable = tableName => Resources
-        .Load&lt;DropTable>(&quot;Tables/&quot; + tableName),
-
-    deserializeEntry = entryName => string.IsNullOrWhiteSpace(entryName) 
-        ? null 
-        : Resources.Load&lt;ScriptableObject>(&quot;Items/&quot; + entryName)
-});
-}</code></pre>
+    deserializeTable = tableName =&gt; Resources
+        .Load&lt;DropTable&gt;(&quot;Tables/&quot; + tableName),</p>
+<pre><code>deserializeEntry = entryName =&gt; string.IsNullOrWhiteSpace(entryName) 
+    ? null 
+    : Resources.Load&amp;lt;ScriptableObject&gt;(&amp;quot;Items/&amp;quot; + entryName)
+</code></pre><p>});
+}</p>
 
   
   
   <a id="Loot_DropTable_Load_" data-uid="Loot.DropTable.Load*"></a>
   <h4 id="Loot_DropTable_Load_Loot_DropTable_Loot_Data_DropTableSaveData_" data-uid="Loot.DropTable.Load(Loot.DropTable,Loot.Data.DropTableSaveData)">Load(DropTable, DropTableSaveData)</h4>
-  <div class="markdown level1 summary"><p>This overload will load only values from your saved data, this means that addictive operations (drops that can't be
+  <div class="markdown level1 summary"><p>This overload will load only values from your saved data, this means that addictive operations (drops that can&apos;t be
 recovered
 from your original table at runtime) will not be loaded</p>
 </div>
@@ -827,35 +820,28 @@ from your original table at runtime) will not be loaded</p>
     </tbody>
   </table>
   <h5 id="Loot_DropTable_Load_Loot_DropTable_Loot_Data_DropTableSaveData__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><div class="WARNING">
-<h5>Warning</h5>
-<p>As remove drops isn't considered a destructive operation, this will compare entries in your data with drops in
+  <div class="markdown level1 remarks"><div class="WARNING"><h5>Warning</h5><p>As remove drops isn&apos;t considered a destructive operation, this will compare entries in your data with drops in
 your runtime table
 and if their entry name does not match drop will be removed</p>
 </div>
 </div>
   <h5 id="Loot_DropTable_Load_Loot_DropTable_Loot_Data_DropTableSaveData__examples">Examples</h5>
-  <div class="NOTE">
-<h5>Note</h5>
-<p>This example came from Save/Load demo scene with minor modification</p>
-</div>
+  <div class="NOTE"><h5>Note</h5><p>This example came from Save/Load demo scene with minor modification
 <pre><code class="lang-cs">public void Load()
-{     
-// Get our saved string from file and remove the possible pretty print
+{<br>// Get our saved string from file and remove the possible pretty print
 var savedJson = &quot;&quot;;
 using (var sr = new StreamReader(Application.persistentDataPath + &quot;/simplestSave.json&quot;))
 {
     var line = &quot;&quot;;
     while ((line = sr.ReadLine()) != null)
         savedJson += line;
-}
-
-// Load from json
-var loadedData = JsonUtility.FromJson&lt;DropTableSaveData>(savedJson);
-
-// Here we will pass recovered data for our runtime table
+}<p>
+</code></pre></div>
+<p>// Load from json
+var loadedData = JsonUtility.FromJson&lt;DropTableSaveData&gt;(savedJson);</p>
+<p>// Here we will pass recovered data for our runtime table
 DropTable.Load(runtimeTable, loadedData);
-}</code></pre>
+}</p>
 
   <h5 class="exceptions">Exceptions</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -868,7 +854,7 @@ DropTable.Load(runtimeTable, loadedData);
     <tbody>
       <tr>
         <td><span class="xref">System.ComponentModel.WarningException</span></td>
-        <td><p>If you try to change values in a table that isn't a clone</p>
+        <td><p>If you try to change values in a table that isn&apos;t a clone</p>
 </td>
       </tr>
     </tbody>
@@ -1004,30 +990,24 @@ DropTable.Load(runtimeTable, loadedData);
     </tbody>
   </table>
   <h5 id="Loot_DropTable_Save_Loot_DropTable__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><div class="WARNING">
-<h5>Warning</h5>
-<p>Your modifiers and filters will not be saved</p>
+  <div class="markdown level1 remarks"><div class="WARNING"><h5>Warning</h5><p>Your modifiers and filters will not be saved</p>
 </div>
 </div>
   <h5 id="Loot_DropTable_Save_Loot_DropTable__examples">Examples</h5>
-  <div class="NOTE">
-<h5>Note</h5>
-<p>This example came from Save/Load demo scene with minor modification</p>
-</div>
+  <div class="NOTE"><h5>Note</h5><p>This example came from Save/Load demo scene with minor modification
 <pre><code class="lang-cs">public void Save()
 {
 // Convert our table to save data
-var saveData = DropTable.Save(runtimeTable);
-
-// Create JSON
-var saveJson = JsonUtility.ToJson(saveData, true);
-
-// Then save it as you normally do when using things json
+var saveData = DropTable.Save(runtimeTable);<p>
+</code></pre></div>
+<p>// Create JSON
+var saveJson = JsonUtility.ToJson(saveData, true);</p>
+<p>// Then save it as you normally do when using things json
 using (var sw = new StreamWriter(Application.persistentDataPath + &quot;/save.json&quot;))
 {
     sw.Write(saveJson);
 }
-}</code></pre>
+}</p>
 
   
   
@@ -1058,7 +1038,7 @@ original table and/or drops, so you will be able to use this information to reco
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Loot.Params.SaveParams.html">SaveParams</a></td>
+        <td><span class="xref">Loot.Params.SaveParams</span></td>
         <td><span class="parametername">saveParams</span></td>
         <td><p>Class the contains your methods to transform table and drop into something serializable</p>
 </td>
@@ -1082,41 +1062,33 @@ original table and/or drops, so you will be able to use this information to reco
     </tbody>
   </table>
   <h5 id="Loot_DropTable_Save_Loot_DropTable_Loot_Params_SaveParams__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><div class="WARNING">
-<h5>Warning</h5>
-<p>Your modifiers and filters will not be saved</p>
+  <div class="markdown level1 remarks"><div class="WARNING"><h5>Warning</h5><p>Your modifiers and filters will not be saved</p>
 </div>
-<div class="NOTE">
-<h5>Note</h5>
-<p>Fields inside <a class="xref" href="Loot.Params.SaveParams.html">SaveParams</a> are optional</p>
+<div class="NOTE"><h5>Note</h5><p>Fields inside <a href="xref:Loot.Params.SaveParams">SaveParams</a> are optional</p>
 </div>
 </div>
   <h5 id="Loot_DropTable_Save_Loot_DropTable_Loot_Params_SaveParams__examples">Examples</h5>
-  <div class="NOTE">
-<h5>Note</h5>
-<p>This example came from Save/Load demo scene with minor modification</p>
-</div>
+  <div class="NOTE"><h5>Note</h5><p>This example came from Save/Load demo scene with minor modification
 <pre><code class="lang-cs">public void Save()
 {
 // As this will suppose that destructive operations was done in our table, lets use a Save
 // override that allow us to recover table (for modifiers) and new entries
 var savedData = DropTable.Save(runtimeTable, new SaveParams
 {
-    serializeTable = () => templateTable.name, // Serialize our base table by name
-    serializeEntry = drop => drop.Entry == null  // Serialize each drop by name too
+    serializeTable = () =&gt; templateTable.name, // Serialize our base table by name
+    serializeEntry = drop =&gt; drop.Entry == null  // Serialize each drop by name too
             ? string.Empty
             : drop.Entry.name
-});
-
-// Convert it to JSON
-var savedJson = JsonUtility.ToJson(savedData, true);
-
-// Then save it
+});<p>
+</code></pre></div>
+<p>// Convert it to JSON
+var savedJson = JsonUtility.ToJson(savedData, true);</p>
+<p>// Then save it
 using (var sw = new StreamWriter(Application.persistentDataPath + &quot;/save.json&quot;))
 {
     sw.Write(savedJson);
 }
-}</code></pre>
+}</p>
 
   
   
@@ -1322,16 +1294,6 @@ using (var sw = new StreamWriter(Application.persistentDataPath + &quot;/save.js
   </div>
   <div>
       <span class="xref">System.Collections.IEnumerable</span>
-  </div>
-  <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="Loot.Extensions.Extensions.html#Loot_Extensions_Extensions_If_System_Collections_Generic_IEnumerable_Loot_Drop__System_Predicate_Loot_Drop__">Extensions.If(IEnumerable&lt;Drop&gt;, Predicate&lt;Drop&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Loot.Utilities.CustomExtensions.html#Loot_Utilities_CustomExtensions_ForEach__1_System_Collections_Generic_IEnumerable___0__System_Action___0__">CustomExtensions.ForEach&lt;T&gt;(IEnumerable&lt;T&gt;, Action&lt;T&gt;)</a>
-  </div>
-  <div>
-      <a class="xref" href="Loot.Utilities.CustomExtensions.html#Loot_Utilities_CustomExtensions_ForEach__1_System_Collections_Generic_IEnumerable___0__System_Action___0_System_Int32__">CustomExtensions.ForEach&lt;T&gt;(IEnumerable&lt;T&gt;, Action&lt;T, Int32&gt;)</a>
   </div>
 </article>
           </div>

@@ -1,8 +1,8 @@
 - name: Home
-  href: index.md
+  href: home.md
 - name: Manual
   href: manual/
   homepage: manual/overview.md
-- name: Api Documentation
+- name: Scripting API
   href: api/
   homepage: api/index.md
