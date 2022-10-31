@@ -449,35 +449,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/intro.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/intro.html",
-          "hash": "8dWdnLDEMot0QUo0W9IgAzqMJRxOYwxiDcF2KRPyg68="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "articles/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "articles/toc.html",
-          "hash": "BlPxk5mtl2kgfcZUgkEguqiSAR/EUyUTT4EdebwkQvs="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "VCAR1jI5fmdfNge/neVdoj7NhBqadKWnwywr5gx+VV8="
+          "hash": "IMvQTCU7WhNraPf6qBOK75hI+lsx5itSeUT87G5drD4="
         }
       },
       "is_incremental": true,
@@ -489,22 +465,43 @@
       "output": {
         ".html": {
           "relative_path": "manual/overview.html",
-          "hash": "SO7/zyWOMx1/0O9EXz+2By1gmzy/lgZRPdzLKf/ZJkg="
+          "hash": "oGANTTr0Elgqn4OIijmZ4UCECktM56jIQr5wpQut6Qk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/quickStart.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/quickStart.html",
+          "hash": "Lagh581hKK+AbMy6b8sTnBYnjDUvmDkPGIsALagw7E4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "manual/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/toc.html",
+          "hash": "BRgm0Bq9xg9HMKKwMn8w2sketd4hYCGwgqLx6xVdxCY="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "OPaFCV3Gvt8X+awEhIuqc85MTns68Ajwd4HvOXp/dSo="
+          "hash": "ep5vJsRynvQ8Hz3hDFAkvlN695PcsATBrtZ/WGwK+RM="
         }
       },
       "is_incremental": false,
@@ -524,7 +521,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 4,
-          "skipped_file_count": 3
+          "skipped_file_count": 4
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,

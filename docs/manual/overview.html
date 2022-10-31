@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Architecture </title>
+    <title>Overview </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Architecture ">
+    <meta name="title" content="Overview ">
     <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
     
     
@@ -56,85 +56,49 @@
         </div>
       </header>
       <div role="main" class="container body-content hide-when-search">
-        <div class="article row grid">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h2 id="architecture">Architecture</h2>
+<h1 id="overview">Overview</h1>
 
-<p>I tried to make the plugin as accessible as possible so here we will take a look about how the asset is organized</p>
-<p>This user guide was designed to provide you with the necessary information to fully understand how this plugin work. You can also find a small guide to demo inside the Demo folder that will provide you with an explanation about what each sample tries to demonstrate, it's a good way to understand it by looking directly at the commented code. ATM I'm working at a web scripting API reference, so if you are getting trouble understanding some specific API, just hit me up in discord and I'll try my best to help you.</p>
-<h2 id="system-components-overview">System components overview</h2>
-<p>Let's understand how the system was been architectured, we have five core classes to cover:</p>
+<p>​	This overview was designed to provide you with the necessary information to fully understand how this plugin work. You can also find a small guide to demo inside the Demo folder that will provide you with an explanation about what each sample tries to demonstrate, it's a good way to understand it by looking directly at the commented code, if you are getting trouble understanding some specific API, just hit me up in discord and I'll try my best to help.</p>
+<hr>
+<h2 id="core-concepts">Core concepts</h2>
+<p>Let's walk thought the core classes:</p>
 <ul>
-<li><strong>Drop table:</strong> This is our main container that will contain our drops, percentages, and amounts, together with extra information. It's a scriptable object that can be created on right-click context - <strong>right-click -&gt; Create -&gt; Drops -&gt; New Table</strong> - and control almost every aspect of our drops. This has not only our drops but also our callbacks, modifier, and filters (we will talk more about this in the specific section), and it's from where you will request drops.</li>
-<li><strong>Drops:</strong> This represents your drop by itself, controlling things like your entry, percentage (in the simple and weighted scenario), amount variation, and some other settings. This exists only inside the context of a <em>Drop table</em>.</li>
-<li><strong>Bag:</strong> When you request a drop from your <em>Drop table</em> you will get a Bag as result, and this will contain your randomized drops.</li>
-<li><strong>Loot:</strong> When you iterate over Bag you'll get Loots, It is a limited vision of Drop that contains only the entry and a collapsed amount (by collapsed I mean, if your drop entry-amount can vary between 2 and 5, a loot will have a number between 2 and 5).</li>
-<li><strong>Logic:</strong> This is the logic that will run in the background when you call for a drop using the <em>Drop Table</em>, you can inject this on each table or can use the default one that provides one version for each weighted and simple table.</li>
+<li><strong>Drop table:</strong> This is the drop container and control the calculation used thought the drops inside it (see below for more information about percentage calculation kind), also it's from here that you will control the <em>drops</em> properties, aside from other additional, for more specific cases, settings. It's inherit from scriptable object so you can create it the right-click context - <strong>right-click -&gt; Create -&gt; Drops -&gt; New Table</strong> -. This has not only your drops but also the callbacks, modifier, and filters (we will talk more about these in the specific section), and it's from where you will request drops.</li>
+<li><strong>Drops:</strong> A layer representing your drop settings, can only be accessed thought the drop table (on the inspector), controlling things like your entry, percentage to drop, amount variation, and other additional settings.</li>
 </ul>
-<p><strong>So the flow was planned to be something like this:</strong> You will create a <em>Drop Table</em> and fill it with your <em>Drops</em>, then you can ask for a drop from your table that will run the default or custom <em>Logic</em> and you will receive a <em>Bag</em> as result, then you can iterate over your bag getting the <em>Loot</em> version of drops and populating what you were originally working on.</p>
-<p>Together with classes I also want to talk about three concepts that reside in the plugin:</p>
+<p>Those classes above you, probably, will change thought the inspector to setup your scenario, below we have classes that represent the answer of some requested operation and only exist in the code side.</p>
 <ul>
-<li><strong>Drop table kind:</strong> In drop table inspector we can see an enum field called drop table kind. This field will change the way that drop percentage/chance is calculated</li>
+<li><strong>Bag:</strong> This is a container of <em>Loot</em>, when you request a drop from your <em>Drop table</em> you will get a Bag as result.</li>
+<li><strong>Loot:</strong> This is a limited version of the drop that contains only the entry and the collapsed dropped amount (if your <em>drop</em> can vary between 3~7 units when randomized a <em>loot</em> will have a single value between the selected range), when you iterate over <em>Bag</em> you'll get <em>Loot</em>.</li>
+</ul>
+<hr>
+<h2 id="additional-concepts">Additional concepts</h2>
+<p>Let's take a look at some additional concepts that reside inside <strong>Loot</strong>:</p>
+<ul>
+<li><p><strong>Percentage calculation:</strong> In the drop table inspector we can see an enum field called <strong>percentage calculation</strong>. This field will change the way that drop percentage/chance is calculated</p>
+<ul>
+<li><strong>Simple:</strong> Each drop has its percentage individually, this means that when we ask for a drop, the table will try to drop each entry individually.
+<strong>i.e.</strong> suppose that we have two drops A and B, and each one has 50% to be dropped, when we ask for a drop, our result bag can have A, A and B, B or nothing (empty bag), also as the entries are independent changing the percentage of one entry will not interfere in another percentage.</li>
 </ul>
 <ul>
-<li>
-<ul>
-<li><strong>Simple:</strong> Each drop has its percentage individually, this means that when we ask for a drop, the table will try to drop each drop individually. For example, suppose that we have two drops A and B, and each one has 50% to be dropped, when we ask for a drop, our result bag can have A, A and B, B or nothing (empty bag), also changing percentage of one item will not interfere in another item percentage.</li>
-<li><strong>Weighted:</strong> The percentage of each drop depends on the sum of the weight of each item, and the sum of all percentages should always be 100%, this also means that when we ask for a drop the table will give to us only one drop from the list. For example, continuing with our A and B example, if each one weights 1, this means that each has 50% to be dropped, our result bag possibilities are A or B, also if we change our B to weight 2 this will make our A change from 50% to 33% and our B change from 50% to 66%.</li>
+<li><strong>Weighted:</strong> The percentage of each drop depends on the sum of the weight of each item, and the sum of all percentages should always be 100%, this also means that when we ask for a drop the table will give to us only one drop from the list.
+<strong>i.e.</strong> continuing with our A and B example, if each one weights 1, this means that each has 50% to be dropped, our result bag possibilities are A or B, also if we change our B to weight 2 this will make our A change from 50% to 33% and our B change from 50% to 66%, because the sum of weighs is 3, A percentage is equal to their weight (1) divided by the table weight (3), so A = 1/3 = 33% and B = 2/3 = 66%.</li>
 </ul>
 </li>
+</ul>
+<ul>
 <li><p><strong>Modifier:</strong> This represents temporary changes that we apply to our drops in runtime that allow us to change drops properties based on custom conditions. For example, increase the drop percentage of consumables based on my sugar eat skill level. Modifiers can be applied in a global or local context, the order runs as the following:</p>
 <p>​	<strong>Global modify</strong> =&gt; <strong>Global modified</strong> =&gt; <strong>Local modify</strong> =&gt; <strong>Local modified</strong> =&gt; (<strong>Filter part</strong>)</p>
-<p>OBS: xxxModify happen for every item while xxxModified happen one time, so if your modify condition depends on some value that needs to be counted every time, use the modified event version</p>
-<ul>
-<li><strong>Global modify:</strong>
-<ul>
-<li>It's raised one time for every drop.</li>
-<li>It's shared between all tables.</li>
-<li>It's an Action<modifyeventargs></modifyeventargs></li>
-</ul>
-</li>
-<li><strong>Global modified:</strong>
-<ul>
-<li>It's raised one time, after all, modify actions finished being applied.</li>
-<li>It's shared between all tables.</li>
-<li>It's an Action<modifiedeventargs></modifiedeventargs></li>
-</ul>
-</li>
-<li><strong>Local modify:</strong>
-<ul>
-<li>It's raised one time for every drop.</li>
-<li>It's individual to each table.</li>
-<li>It's an Action<modifyeventargs></modifyeventargs></li>
-</ul>
-</li>
-<li><strong>Local modified:</strong>
-<ul>
-<li>It's raised one time, after all, modify finished being applied.</li>
-<li>It's individual to each table.</li>
-<li>It's an Action<modifiedeventargs>.</modifiedeventargs></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>Filter drops:</strong> This will allow us to temporarily filter our drops. For example, in N attempt make sure that users receive at least one of this specific item type in their drop. Filters happen after the modifiers was applied, this means that your condition is based on a modified version of your table.</p>
-<ul>
-<li><strong>Filter:</strong> This will remove the drop from the collection if ANY listener returns false.
-<ul>
-<li>It's raised one time for every drop.</li>
-<li>It's individual to each table.</li>
-<li>It's an Predicate<filtereventargs>.</filtereventargs></li>
-</ul>
-</li>
-<li><strong>Filtered:</strong> It's the last thing to be applied, so the list of drops at this point is already modified and filtered
-<ul>
-<li>It's raised one time.</li>
-<li>It's individual to each table.</li>
-<li>It's an Action<filteredeventargs>.</filteredeventargs></li>
-</ul>
-</li>
-</ul>
 </li>
 </ul>
 </article>
