@@ -480,16 +480,19 @@
           "hash": "VCAR1jI5fmdfNge/neVdoj7NhBqadKWnwywr5gx+VV8="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "WSuRrYiGwKKMbtdG9z8W9fXmLoCyTnGg9AxbPKLXm2Y="
+          "hash": "OPaFCV3Gvt8X+awEhIuqc85MTns68Ajwd4HvOXp/dSo="
         }
       },
       "is_incremental": false,
