@@ -36,8 +36,8 @@
     "dest": "docs",
     "template": [
       "default",
-	  "templates/custom",
-	  "templates/darkfx"
+	  "templates/darkfx",
+	  "templates/custom"
     ]
   }
 }

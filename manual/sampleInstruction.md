@@ -8,3 +8,7 @@ This is a small section of the document that will provide a brief explanation ab
 
 Here we have the most basic case, a simple scenario with a list of items with an arbitrary percentages. This sample set this list into two different drop tables (one for a simple table and a second for a weighted table) then request a drop and show the results into the log.
 
+Both sample (simple and weighted) use the same component ```BasicSample.cs``` the only difference is that table referenced
+
+![Simple weighted drop](images/sw_drop.jpg)
+

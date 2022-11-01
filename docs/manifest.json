@@ -276,6 +276,17 @@
           "hash": "n6+LfIaEOMI1IjcrOuWbG8LFtge+C6b6fF/p+sfP1VM="
         }
       },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "manual/images/sw_drop.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/sw_drop.jpg"
+        }
+      },
       "is_incremental": false,
       "version": ""
     },
@@ -288,7 +299,7 @@
           "hash": "rY0tlLGwN3rC1AkMeZZ5K3P2JeHnghsfyBR6om0J+Jk="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -300,7 +311,7 @@
           "hash": "AYjR9xj9YK7dvCPlod12jVl6ZQ6FMdYH/TiKM/VD5rA="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -309,7 +320,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/sampleInstruction.html",
-          "hash": "WLbD/eNg7s0+xSB66vTsqnYEMMy6sGuH4OMUTGYbgwI="
+          "hash": "zFtXtruOys6mKQ3MXQBOhR8hnYQPfOGfRvCrMUQlUn4="
         }
       },
       "is_incremental": false,
@@ -353,13 +364,20 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 5,
-          "skipped_file_count": 3
+          "skipped_file_count": 4
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 20,
           "skipped_file_count": 20
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
