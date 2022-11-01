@@ -273,10 +273,10 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "f+X4R9wzXE9jDKg5+vHnp0vK+3NKdr4Fs4+CD/ejQ5w="
+          "hash": "n6+LfIaEOMI1IjcrOuWbG8LFtge+C6b6fF/p+sfP1VM="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -288,7 +288,7 @@
           "hash": "rY0tlLGwN3rC1AkMeZZ5K3P2JeHnghsfyBR6om0J+Jk="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -304,12 +304,24 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "manual/sampleInstruction.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/sampleInstruction.html",
+          "hash": "WLbD/eNg7s0+xSB66vTsqnYEMMy6sGuH4OMUTGYbgwI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "manual/toc.md",
       "output": {
         ".html": {
           "relative_path": "manual/toc.html",
-          "hash": "BRgm0Bq9xg9HMKKwMn8w2sketd4hYCGwgqLx6xVdxCY="
+          "hash": "g4l0+DFhxh0Bv0vtdBJOuIugjWi9MggmTWe5MpuWk4w="
         }
       },
       "is_incremental": false,
@@ -340,7 +352,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 4,
+          "total_file_count": 5,
           "skipped_file_count": 3
         },
         "ManagedReferenceDocumentProcessor": {

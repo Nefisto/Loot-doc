@@ -7,7 +7,8 @@ uid: manual.md
 
 Loot documentation is separated into two parts, you can access both of them thought the top menu:
 
-**Manual:** Here we describe how Loot was made, important concepts, some exposed API's and other necessary things to understood how Loot do things.
+**Manual:** Here we introduce you to how the Loot works, a quick start, how Loot was designed and some important concepts. Also we provide a guide thought the samples.
+
 **Scripting API:** Code documentation, separated in namespaces.
 
 * **Loot:** Core classes
