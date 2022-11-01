@@ -8,7 +8,12 @@ apiRules:
 - exclude:
     uidRegex: ^Loot\.Param
     type: Namespace
+
+-exclude:
+    uidRegex: ^Loot\.Bag\.Bag
+    type: Method
+
     
 attributeRules:
 - exclude:
-    uidRegex: ^Serializable
+    uidRegex: ^System\.Serializable

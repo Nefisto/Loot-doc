@@ -29,15 +29,14 @@
     "resource": [
       {
         "files": [
-          "images/**"
+          "manual/images/**"
         ]
       }
     ],
     "dest": "docs",
     "template": [
       "default",
-	  "templates/darkfx",
-	  "templates/custom"
+	  "templates/unity"
     ]
   }
 }
