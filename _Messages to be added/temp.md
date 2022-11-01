@@ -27,3 +27,7 @@
     * It's raised one time. 
     * It's individual to each table.
     * It's an Action<FilteredEventArgs>.
+
+
+
+OBS: Drop table implement ```IEnumerable<Drop>``` and run these events inside it, so if you try to do some LINQ inside some event you will end with a stack overflow error, this is why every event give to you a list of modified drops.

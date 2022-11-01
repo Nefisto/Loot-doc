@@ -1,4 +1,4 @@
-
+.inheritedMembers { display: none; }
 
 :root, body.dark-theme {
   --color-foreground: #ccd5dc;

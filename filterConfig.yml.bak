@@ -5,3 +5,10 @@ apiRules:
 - exclude:
     uidRegex: ^Loot\.Utilities
     type: Namespace
+- exclude:
+    uidRegex: ^Loot\.Param
+    type: Namespace
+    
+attributeRules:
+- exclude:
+    uidRegex: ^Serializable

@@ -8,7 +8,7 @@ uid: manual.md
 Loot documentation is separated into two parts, you can access both of them thought the top menu:
 
 **Manual:** Here we describe how Loot was made, important concepts, some exposed API's and other necessary things to understood how Loot do things.
-**Scripting API:** Code documentation, separated in assemblies.
+**Scripting API:** Code documentation, separated in namespaces.
 
 * **Loot:** Core classes
 * **Loot.Context:** Classes used as context data to pass information thought API's and callbacks

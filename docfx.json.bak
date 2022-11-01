@@ -10,7 +10,7 @@
         }
       ],
       "dest": "api",
-	  "filter": filterConfig.yml
+	  "filter": "filterConfig.yml"
     }
   ],
   "build": {
@@ -36,6 +36,7 @@
     "dest": "docs",
     "template": [
       "default",
+	  "templates/custom",
 	  "templates/darkfx"
     ]
   }

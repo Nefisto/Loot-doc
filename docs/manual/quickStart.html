@@ -70,27 +70,15 @@
 
 <p>Steps to use the Loot plugin:</p>
 <ol>
-<li><p>Import Loot plugin from package manager</p>
-</li>
-<li><p><strong>Right-click -&gt; Create -&gt; Loot -&gt; New table</strong></p>
-</li>
-<li><p>Configure your table</p>
-</li>
-<li><ol>
-<li>Chose a <strong>kind</strong> based on what you&#39;re planning to do</li>
-<li>[Optional] Set a custom logic (let it to none and the default logic will be used)</li>
-<li>Add your drops in <strong>Drops</strong> list</li>
+<li>Import Loot plugin from package manager</li>
+<li>Create a new table thought: <strong>Right-click -&gt; Create -&gt; Loot -&gt; New table</strong></li>
+<li>Configure your table</li>
+<li>Fill the drop list (here you need to make sure that your <em>item concept</em> inherit from scriptable object, because this is the base type used to add drops thought inspector)</li>
+<li>Create a reference to your table in your desired script</li>
+<li>Call the desired API using your reference and store the bag result <code>var bag = myTable.Drop()</code> (all API&#39;s returns a bag)</li>
+<li>Your bag contains your drop, so you can iterate over your bag to do what you want with your result</li>
 </ol>
-</li>
-<li><p>Create a reference to your table in your desired script with public DropTable myTable </p>
-</li>
-<li><p>Call the desired API using your reference var bag = myTable.Drop(), all of them will return a bag</p>
-</li>
-<li><p>Your bag contains your drop, so you can iterate over your bag to do what you want with your loot</p>
-</li>
-</ol>
-<p>OBS: Drop table implement IEnumerable<drop> and run these events inside it, so if you try to do some LINQ inside some event you will end with a stack overflow error, this is why every event give to you a list of modified drops.<p>
-</drop></article>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
