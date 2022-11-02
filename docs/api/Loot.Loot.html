@@ -72,88 +72,48 @@
   
   <h1 id="Loot_Loot" data-uid="Loot.Loot" class="text-break">Class Loot
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A small collapsed view of <a class="xref" href="Loot.Drop.html">Drop</a></p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <h5 id="Loot_Loot_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class Loot</code></pre>
   </div>
-  <h3 id="constructors">Constructors
-  </h3>
-  
-  
-  <a id="Loot_Loot__ctor_" data-uid="Loot.Loot.#ctor*"></a>
-  <h4 id="Loot_Loot__ctor_Loot_Drop_" data-uid="Loot.Loot.#ctor(Loot.Drop)">Loot(Drop)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Loot(Drop drop)</code></pre>
-  </div>
-    
-  
-  <h3 id="fields">Fields
-  </h3>
-  
-  
-  <h4 id="Loot_Loot_entry" data-uid="Loot.Loot.entry">entry</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ScriptableObject entry</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.ScriptableObject</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Loot_Loot_fromDrop" data-uid="Loot.Loot.fromDrop">fromDrop</h4>
-  <div class="markdown level1 summary"><p>Drop that originated this loot</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Drop fromDrop</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Loot.Drop.html">Drop</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="properties">Properties
   </h3>
   
   
   <a id="Loot_Loot_Amount_" data-uid="Loot.Loot.Amount*"></a>
   <h4 id="Loot_Loot_Amount" data-uid="Loot.Loot.Amount">Amount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A randomized amount from original <a class="xref" href="Loot.Drop.html#Loot_Drop_AmountRange">AmountRange</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int Amount { get; set; }</code></pre>
+  </div>
+  
+  
+  <a id="Loot_Loot_Entry_" data-uid="Loot.Loot.Entry*"></a>
+  <h4 id="Loot_Loot_Entry" data-uid="Loot.Loot.Entry">Entry</h4>
+  <div class="markdown level1 summary"><p>A reference to original drop entry</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ScriptableObject Entry { get; set; }</code></pre>
+  </div>
+  
+  
+  <a id="Loot_Loot_FromDrop_" data-uid="Loot.Loot.FromDrop*"></a>
+  <h4 id="Loot_Loot_FromDrop" data-uid="Loot.Loot.FromDrop">FromDrop</h4>
+  <div class="markdown level1 summary"><p>A reference to original drop, this can be used to change information on original drop when this entry is
+dropped</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Drop FromDrop { get; set; }</code></pre>
   </div>
 </article>
           </div>

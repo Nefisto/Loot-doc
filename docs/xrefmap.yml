@@ -1038,19 +1038,6 @@ references:
   commentId: T:Loot.Loot
   fullName: Loot.Loot
   nameWithType: Loot
-- uid: Loot.Loot.#ctor(Loot.Drop)
-  name: Loot(Drop)
-  href: api/Loot.Loot.html#Loot_Loot__ctor_Loot_Drop_
-  commentId: M:Loot.Loot.#ctor(Loot.Drop)
-  fullName: Loot.Loot.Loot(Loot.Drop)
-  nameWithType: Loot.Loot(Drop)
-- uid: Loot.Loot.#ctor*
-  name: Loot
-  href: api/Loot.Loot.html#Loot_Loot__ctor_
-  commentId: Overload:Loot.Loot.#ctor
-  isSpec: "True"
-  fullName: Loot.Loot.Loot
-  nameWithType: Loot.Loot
 - uid: Loot.Loot.Amount
   name: Amount
   href: api/Loot.Loot.html#Loot_Loot_Amount
@@ -1064,18 +1051,32 @@ references:
   isSpec: "True"
   fullName: Loot.Loot.Amount
   nameWithType: Loot.Amount
-- uid: Loot.Loot.entry
-  name: entry
-  href: api/Loot.Loot.html#Loot_Loot_entry
-  commentId: F:Loot.Loot.entry
-  fullName: Loot.Loot.entry
-  nameWithType: Loot.entry
-- uid: Loot.Loot.fromDrop
-  name: fromDrop
-  href: api/Loot.Loot.html#Loot_Loot_fromDrop
-  commentId: F:Loot.Loot.fromDrop
-  fullName: Loot.Loot.fromDrop
-  nameWithType: Loot.fromDrop
+- uid: Loot.Loot.Entry
+  name: Entry
+  href: api/Loot.Loot.html#Loot_Loot_Entry
+  commentId: P:Loot.Loot.Entry
+  fullName: Loot.Loot.Entry
+  nameWithType: Loot.Entry
+- uid: Loot.Loot.Entry*
+  name: Entry
+  href: api/Loot.Loot.html#Loot_Loot_Entry_
+  commentId: Overload:Loot.Loot.Entry
+  isSpec: "True"
+  fullName: Loot.Loot.Entry
+  nameWithType: Loot.Entry
+- uid: Loot.Loot.FromDrop
+  name: FromDrop
+  href: api/Loot.Loot.html#Loot_Loot_FromDrop
+  commentId: P:Loot.Loot.FromDrop
+  fullName: Loot.Loot.FromDrop
+  nameWithType: Loot.FromDrop
+- uid: Loot.Loot.FromDrop*
+  name: FromDrop
+  href: api/Loot.Loot.html#Loot_Loot_FromDrop_
+  commentId: Overload:Loot.Loot.FromDrop
+  isSpec: "True"
+  fullName: Loot.Loot.FromDrop
+  nameWithType: Loot.FromDrop
 - uid: Loot.LootSettings
   name: LootSettings
   href: api/Loot.LootSettings.html
