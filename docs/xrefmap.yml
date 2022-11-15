@@ -564,6 +564,19 @@ references:
   isSpec: "True"
   fullName: Loot.Drop.GetPercentage
   nameWithType: Drop.GetPercentage
+- uid: Loot.Drop.IsExtensionDrop
+  name: IsExtensionDrop
+  href: api/Loot.Drop.html#Loot_Drop_IsExtensionDrop
+  commentId: P:Loot.Drop.IsExtensionDrop
+  fullName: Loot.Drop.IsExtensionDrop
+  nameWithType: Drop.IsExtensionDrop
+- uid: Loot.Drop.IsExtensionDrop*
+  name: IsExtensionDrop
+  href: api/Loot.Drop.html#Loot_Drop_IsExtensionDrop_
+  commentId: Overload:Loot.Drop.IsExtensionDrop
+  isSpec: "True"
+  fullName: Loot.Drop.IsExtensionDrop
+  nameWithType: Drop.IsExtensionDrop
 - uid: Loot.Drop.IsGuaranteed
   name: IsGuaranteed
   href: api/Loot.Drop.html#Loot_Drop_IsGuaranteed
@@ -1002,12 +1015,6 @@ references:
   commentId: F:Loot.DropTable.tableIcon
   fullName: Loot.DropTable.tableIcon
   nameWithType: DropTable.tableIcon
-- uid: Loot.DropTable.treatTablesAsDrops
-  name: treatTablesAsDrops
-  href: api/Loot.DropTable.html#Loot_DropTable_treatTablesAsDrops
-  commentId: F:Loot.DropTable.treatTablesAsDrops
-  fullName: Loot.DropTable.treatTablesAsDrops
-  nameWithType: DropTable.treatTablesAsDrops
 - uid: Loot.Enum
   name: Loot.Enum
   href: api/Loot.Enum.html

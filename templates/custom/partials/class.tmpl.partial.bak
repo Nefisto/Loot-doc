@@ -148,7 +148,7 @@
 {{/eventType}}
 {{/syntax}}
 {{#remarks}}
-<h5 id="{{id}}_remarks">{{__global.remarks}}</h5>
+<h5 id="{{id}}_remarks">{"HI WORLD"}</h5>
 <div class="markdown level1 remarks">{{{remarks}}}</div>
 {{/remarks}}
 {{#example.0}}
@@ -195,9 +195,6 @@
 {{/seealso.0}}
 {{/children}}
 {{/children}}
-{{#implements.0}}
-<h3 id="implements">{{__global.implements}}</h3>
-{{/implements.0}}
 {{#extensionMethods.0}}
 <h3 id="extensionmethods">{{__global.extensionMethods}}</h3>
 {{/extensionMethods.0}}

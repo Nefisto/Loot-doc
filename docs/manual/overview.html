@@ -68,7 +68,7 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="overview">Overview</h1>
 
-<p>​   This overview was designed to provide you with the necessary information to fully understand how this plugin work. You can also find a small guide to demo inside the Demo folder that will provide you with an explanation about what each sample tries to demonstrate, it&#39;s a good way to understand it by looking directly at the commented code, if you are getting trouble understanding some specific API, just hit me up in discord and I&#39;ll try my best to help.</p>
+<p>​   This overview was designed to provide you with the necessary information to fully understand how this plugin work, also create a terminology to help you to understand what something does just by seeing it&#39;s name. You can also find a small guide to demo inside the Demo folder that will provide you with an explanation about what each sample tries to demonstrate, it&#39;s a good way to understand it by looking directly at the commented code, if you are getting trouble understanding some specific API, just hit me up in discord and I&#39;ll try my best to help.</p>
 <hr>
 <h2 id="core-concepts">Core concepts</h2>
 <p>Let&#39;s walk thought the core classes:</p>
@@ -83,9 +83,10 @@
 </ul>
 <hr>
 <h2 id="additional-concepts">Additional concepts</h2>
-<p>Let&#39;s take a look at some additional concepts that reside inside <strong>Loot</strong>:</p>
-<ul>
-<li><p><strong>Percentage calculation:</strong> In the drop table inspector we can see an enum field called <strong>percentage calculation</strong>. This field will change the way that drop percentage/chance is calculated </p>
+<p>Let&#39;s take a look at some additional important concepts that reside inside <strong>Loot</strong>:</p>
+<h3 id="percentage-calculation">Percentage calculation</h3>
+<p>In the drop table inspector we can see an enum field called <strong>percentage calculation</strong>. This field will change the way that drop percentage/chance is calculated </p>
+<p><img src="images/sample_percentageCalculation.png" alt="sample"></p>
 <ul>
 <li><p><strong>Simple:</strong> Each drop has its percentage individually, this means that when we ask for a drop, the table will try to drop each entry individually. 
 <strong>i.e.</strong> suppose that we have two drops A and B, and each one has 50% to be dropped, when we ask for a drop, our result bag can have A, A and B, B or nothing (empty bag), also as the entries are independent changing the percentage of one entry will not interfere in another percentage.</p>
@@ -94,11 +95,15 @@
 <strong>i.e.</strong> continuing with our A and B example, if each one weights 1, this means that each has 50% to be dropped, our result bag possibilities are A or B, also if we change our B to weight 2 this will make our A change from 50% to 33% and our B change from 50% to 66%, because the sum of weighs is 3, A percentage is equal to their weight (1) divided by the table weight (3), so A = 1/3 = 33% and B = 2/3 = 66%.</p>
 </li>
 </ul>
-</li>
-<li><p><strong>Modifier:</strong> This represents temporary changes that we apply to our drops in runtime that allow us to change drops properties based on custom conditions. For example, increase the drop percentage of consumables based on my sugar eat skill level. Modifiers can be applied in a global or local context, the order runs as the following:</p>
-<p>​ <strong>Global modify</strong> =&gt; <strong>Global modified</strong> =&gt; <strong>Local modify</strong> =&gt; <strong>Local modified</strong> =&gt; (<strong>Filter part</strong>)</p>
-</li>
-</ul>
+<h3 id="extension-drop">Extension drop</h3>
+<p>​   This feature is created to allow you to have hierarchy drops mixing multiple drop tables and treat all then as a unique table. Take the following example in count: in your game every <u>wolf</u> drops a <em>fur</em>, also every <u>baby wolf</u> drops a <em>teeth</em> then you have a <u>Blue Baby wolf</u> enemy that, as the name suggests, drops things from <u>wolf table</u>,  <u>baby wolf table</u> and also some custom items specific from this kind of wolf. You can toggle this feature into the drop on inspector:</p>
+<p><img src="images/sample_extensionDrop.png" alt="sample"></p>
+<p><strong>Important:</strong> Note that we can enable it on <em>_Common wolf drop</em> entry and can&#39;t on <em>Teeth</em> entry. This option will be enabled only when the entry is another <strong>Drop Table</strong> AND the <a href="overview.html#percentage-calculation">percentage calculation</a> between two table are equal.</p>
+<p>When this option is enabled the entry will not be treated as a drop (so you will not get it when iterating over this table, instead you will get the union between two drop tables), and in the case that your table is a weighted one, the weight from inner tables will interfere in outer tables, as we can see in the following gif.</p>
+<p><img src="images/sample_innerDropChangeWeight.gif" alt=""></p>
+<h3 id="modifier">Modifier</h3>
+<p>This represents temporary changes that we apply to our drops in runtime that allow us to change drops properties based on custom conditions. For example, increase the drop percentage of consumables based on my sugar eat skill level. Modifiers can be applied in a global or local context, the order runs as the following:</p>
+<p>​   <strong>Global modify</strong> =&gt; <strong>Global modified</strong> =&gt; <strong>Local modify</strong> =&gt; <strong>Local modified</strong> =&gt; (<strong>Filter part</strong>)</p>
 </article>
           </div>
           

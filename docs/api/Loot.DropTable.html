@@ -80,11 +80,6 @@
     <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Loot.Drop.html">Drop</a>&gt;</div>
     <div><span class="xref">System.Collections.IEnumerable</span></div>
   </div>
-  <h5 id="Loot_DropTable_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[CreateAssetMenu(fileName = &quot;Drop table&quot;, menuName = &quot;Loot/New Table&quot;)]
-public sealed class DropTable : ScriptableObject, IEnumerable&lt;Drop&gt;, IEnumerable</code></pre>
-  </div>
   <h3 id="fields">Fields
   </h3>
   
@@ -148,6 +143,7 @@ public List&lt;Drop&gt; drops</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Multiline]
+[Delayed]
 public string tableDescription</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
@@ -189,30 +185,6 @@ public Sprite tableIcon</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">UnityEngine.Sprite</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Loot_DropTable_treatTablesAsDrops" data-uid="Loot.DropTable.treatTablesAsDrops">treatTablesAsDrops</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool treatTablesAsDrops</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>

@@ -5,7 +5,7 @@ uid: manual.md
 
 # Loot - A drop table solution
 
-Loot documentation is separated into two parts, you can access both of them thought the top menu:
+Welcome to Loot documentation, it is separated into two parts, you can access both of them through the top menu:
 
 **Manual:** Here we introduce you to how the Loot works, a quick start, how Loot was designed and some important concepts. Also we provide a guide thought the samples.
 
@@ -27,4 +27,4 @@ Thanks for buying and supporting my work. I hope that it helps you to bring your
 * Email: joao.gavron@gmail.com
 * Discord: Nefisto#3403
 
-doc version: 1.0
+doc version (follow asset version): 1.2.0

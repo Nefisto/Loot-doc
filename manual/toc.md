@@ -1,4 +1,4 @@
-# [Components overview](overview.md)
+# [Concepts overview](overview.md)
 
 # [Quick start](quickStart.md)
 
