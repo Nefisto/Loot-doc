@@ -83,117 +83,11 @@
 </ul>
 <hr>
 <h3 id="modifier--filter">Modifier / Filter</h3>
-<p>We need to be able to modify and filter the drops at runtime. <strong>Loot</strong> has some events exposed to allow you to control the final outcome of a table, those events run in a specific order, let&#39;s see this order and then talk a little about each of them.</p>
+<p>We need to be able to modify and filter the drops at runtime. <strong>Loot</strong> has some API&#39;s exposed to allow you to control the final outcome of a table, those API&#39;s run in a specific order, lets see this order and then talk a little about each of them.</p>
 <div align="center"> <strong>Global modify</strong> =&gt; <strong>Global modified</strong> =&gt; <strong>Local modify</strong> =&gt; <strong>Local modified</strong> =&gt; <strong>Table filter</strong></div>
 
 <h4 id="global-modify">Global modify</h4>
-<ul>
-<li>Applied to <strong>all</strong> tables</li>
-<li>It is invoked <strong>one time for each entry</strong> in the table requesting it</li>
-<li>It will provide context information though a <a href="./../api/Loot.Context.ModifyContext.html">Modify context</a></li>
-<li>Should be registered though <strong>class</strong> </li>
-</ul>
-<pre><code class="lang-c#">private void Awake()
-    =&gt; DropTable.OnGlobalModify += DoubleCurrenciesAmount;
-
-// RULE: Drop 2x for each drop of currency type
-private void DoubleCurrenciesAmount (ModifyContext ctx)
-{
-    var currentDrop = ctx.CurrentDrop;
-
-    if (!(currentDrop.Entry is Currency))
-        return;
-
-    currentDrop.AmountRange *= 2;
-}
-</code></pre><h4 id="global-modified">Global modified</h4>
-<p>Note that most operations that could be done in <strong>Modified</strong> could also be done on <strong>Modify</strong> instead, but this event is called just one time per table, so if your rule is relying on some calculation, maybe is a good idea to add it here instead of on <strong>Modify</strong></p>
-<ul>
-<li>Applied to <strong>all</strong> tables</li>
-<li>It is invoked <strong>one time per table</strong> requesting it</li>
-<li>It will provide context information though a <a href="./../api/Loot.Context.ModifiedContext.html">Modified context</a></li>
-<li>Should be register though <strong>class</strong></li>
-</ul>
-<pre><code class="lang-c#">private void Awake()
-    =&gt; DropTable.OnGlobalModified += MyCustomModified;
-
-// If this table have 2 or more card, all MISC type items will get a bonus of flat 10% in drop chance
-private void MyCustomModified (ModifiedContext ctx)
-{
-    var modifiedDrops = ctx.ModifiedDrops;
-
-    // We are using ModifIED here instead of ModifY, cause we don&#39;t want to count amount of cards for each item that we go though
-    var amountOfCards = modifiedDrops
-        .Count(d =&gt; d.Entry is Misc m &amp;&amp; m.name.ToUpper().Contains(&quot;CARD&quot;));
-
-    if (amountOfCards &lt; 2)
-        return;
-
-    var miscList = modifiedDrops
-        .Where(d =&gt; d.Entry is Misc);
-
-    foreach (var drop in miscList)
-        drop.Percentage += 10f;
-}
-</code></pre><h4 id="local-modify">Local modify</h4>
-<ul>
-<li>Applied to <strong>referenced</strong> table</li>
-<li>It is invoked <strong>one time for each entry</strong> in the table requesting it</li>
-<li>It will provide context information though a <a href="./../api/Loot.Context.ModifyContext.html">Modify context</a></li>
-<li>Should be registered though <strong>instance</strong> </li>
-</ul>
-<pre><code class="lang-c#">public DropTable monsterTable;
-
-private void Awake()
-    =&gt; monsterTable.OnLocalModify += GuaranteeCurrency;
-
-// All CURRENCY that have COIN in name will be guaranteed to drop
-private void GuaranteeCurrency (ModifyContext ctx)
-{
-    var currentDrop = ctx.CurrentDrop;
-
-    if (!(currentDrop.Entry is Currency))
-        return;
-
-    if (!currentDrop.Entry.name.ToUpper().Contains(&quot;COIN&quot;))
-        return;
-
-    currentDrop.IsGuaranteed = true;
-}
-</code></pre><h4 id="local-modified">Local modified</h4>
-<p>Similar to global modified but its applied only only the current referenced table instead of all</p>
-<ul>
-<li>Applied to <strong>referenced</strong> table</li>
-<li>It is invoked <strong>one time per table</strong> requesting it</li>
-<li>It will provide context information though a <a href="./../api/Loot.Context.ModifiedContext.html">Modified context</a></li>
-<li>Should be register though <strong>instance</strong></li>
-</ul>
-<pre><code class="lang-c#">public DropTable monsterTable;
-
-private void Awake()
-    =&gt; monsterTable.OnLocalModified += MyCustomModified;
-
-private void MyCustomModified (ModifiedContext ctx)
-    =&gt;  // TODO: think in a sample to insert here \o/
-</code></pre><h4 id="table-filter">Table filter</h4>
-<p>This operation will filter your table using <code>Predicate&lt;Drop, bool&gt;</code>, keep in mind that the item <strong>must</strong> pass thought <strong>all filter</strong> to appear in the iteration</p>
-<ul>
-<li>Applied to <strong>referenced</strong> table</li>
-<li>It is invoked <strong>one time for each entry</strong> in the table requesting it</li>
-<li>It will provide the current <a href="./../api/Loot.Drop.html">Drop</a> though callback signature</li>
-<li>Should be registered though <strong>instance</strong> </li>
-</ul>
-<pre><code class="lang-c#">public DropTable monsterTable;
-
-private void Awake()
-    =&gt; monsterTable.AddFilter(MyFilterRule);
-
-// If player is cursed, show only cursed items
-// If player is not cursed show only no cursed items
-private bool MyFilterRule (Drop drop)
-    =&gt; drop.Entry is Item item 
-       &amp;&amp; item.cursed == player.IsCursed;
-</code></pre><hr>
+<hr>
 <h2 id="additional-concepts">Additional concepts</h2>
 <p>Let&#39;s take a look at some additional important concepts that reside inside <strong>Loot</strong>:</p>
 <h3 id="percentage-calculation">Percentage calculation</h3>
@@ -229,7 +123,7 @@ private bool MyFilterRule (Drop drop)
 <p>​   This feature is created to allow you to have hierarchy drops mixing multiple drop tables and treat all then as a unique table. Take the following example in count: in your game every <u>wolf</u> drops a <em>fur</em>, also every <u>baby wolf</u> drops a <em>teeth</em> then you have a <u>Blue Baby wolf</u> enemy that, as the name suggests, drops things from <u>wolf table</u>,  <u>baby wolf table</u> and also some custom items specific from this kind of wolf. You can toggle this feature into the drop on inspector:</p>
 <div align="center"><img src="images/sample_extensionDrop.png" alt="sample"> </div>
 
-<p><strong>Important:</strong> Note that we can enable it on <em>_Common wolf drop</em> entry and can&#39;t on <em>Teeth</em> entry. This option will be enabled only when the entry is another <strong>Drop Table</strong> AND the <a href="overview.html#percentage-calculation">percentage calculation</a> between two table are equal.</p>
+<p><strong>Important:</strong> Note that we can enable it on <em>_Common wolf drop</em> entry and can&#39;t on <em>Teeth</em> entry. This option will be enabled only when the entry is another <strong>Drop Table</strong> AND the <a href="./overview.md#percentage-calculation">percentage calculation</a> between two table are equal.</p>
 <p>When this option is enabled the entry will not be treated as a drop (so you will not get it when iterating over this table, instead you will get the union between two drop tables), and in the case that your table is a weighted one, the weight from inner tables will interfere in outer tables, as we can see in the following gif.</p>
 <p><img src="images/sample_innerDropChangeWeight.gif" alt=""></p>
 </article>
@@ -240,7 +134,7 @@ private bool MyFilterRule (Drop drop)
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Nefisto/Loot-doc/blob/main/manual/overview.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/Nefisto/Loot-doc/blob/main/manual/Concepts overview.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

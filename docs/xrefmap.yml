@@ -246,21 +246,15 @@ references:
   commentId: T:Loot.Context.ModifiedContext
   fullName: Loot.Context.ModifiedContext
   nameWithType: ModifiedContext
-- uid: Loot.Context.ModifiedContext.#ctor
-  name: ModifiedContext()
-  href: api/Loot.Context.ModifiedContext.html#Loot_Context_ModifiedContext__ctor
-  commentId: M:Loot.Context.ModifiedContext.#ctor
-  fullName: Loot.Context.ModifiedContext.ModifiedContext()
-  nameWithType: ModifiedContext.ModifiedContext()
-- uid: Loot.Context.ModifiedContext.#ctor(System.Collections.Generic.List{Loot.Drop},Loot.DropTable)
-  name: ModifiedContext(List<Drop>, DropTable)
-  href: api/Loot.Context.ModifiedContext.html#Loot_Context_ModifiedContext__ctor_System_Collections_Generic_List_Loot_Drop__Loot_DropTable_
-  commentId: M:Loot.Context.ModifiedContext.#ctor(System.Collections.Generic.List{Loot.Drop},Loot.DropTable)
-  name.vb: ModifiedContext(List(Of Drop), DropTable)
-  fullName: Loot.Context.ModifiedContext.ModifiedContext(System.Collections.Generic.List<Loot.Drop>, Loot.DropTable)
-  fullName.vb: Loot.Context.ModifiedContext.ModifiedContext(System.Collections.Generic.List(Of Loot.Drop), Loot.DropTable)
-  nameWithType: ModifiedContext.ModifiedContext(List<Drop>, DropTable)
-  nameWithType.vb: ModifiedContext.ModifiedContext(List(Of Drop), DropTable)
+- uid: Loot.Context.ModifiedContext.#ctor(System.Collections.Generic.List{Loot.Drop})
+  name: ModifiedContext(List<Drop>)
+  href: api/Loot.Context.ModifiedContext.html#Loot_Context_ModifiedContext__ctor_System_Collections_Generic_List_Loot_Drop__
+  commentId: M:Loot.Context.ModifiedContext.#ctor(System.Collections.Generic.List{Loot.Drop})
+  name.vb: ModifiedContext(List(Of Drop))
+  fullName: Loot.Context.ModifiedContext.ModifiedContext(System.Collections.Generic.List<Loot.Drop>)
+  fullName.vb: Loot.Context.ModifiedContext.ModifiedContext(System.Collections.Generic.List(Of Loot.Drop))
+  nameWithType: ModifiedContext.ModifiedContext(List<Drop>)
+  nameWithType.vb: ModifiedContext.ModifiedContext(List(Of Drop))
 - uid: Loot.Context.ModifiedContext.#ctor*
   name: ModifiedContext
   href: api/Loot.Context.ModifiedContext.html#Loot_Context_ModifiedContext__ctor_
@@ -268,39 +262,24 @@ references:
   isSpec: "True"
   fullName: Loot.Context.ModifiedContext.ModifiedContext
   nameWithType: ModifiedContext.ModifiedContext
-- uid: Loot.Context.ModifiedContext.modifiedDrops
-  name: modifiedDrops
-  href: api/Loot.Context.ModifiedContext.html#Loot_Context_ModifiedContext_modifiedDrops
-  commentId: F:Loot.Context.ModifiedContext.modifiedDrops
-  fullName: Loot.Context.ModifiedContext.modifiedDrops
-  nameWithType: ModifiedContext.modifiedDrops
-- uid: Loot.Context.ModifiedContext.table
-  name: table
-  href: api/Loot.Context.ModifiedContext.html#Loot_Context_ModifiedContext_table
-  commentId: F:Loot.Context.ModifiedContext.table
-  fullName: Loot.Context.ModifiedContext.table
-  nameWithType: ModifiedContext.table
+- uid: Loot.Context.ModifiedContext.ModifiedDrops
+  name: ModifiedDrops
+  href: api/Loot.Context.ModifiedContext.html#Loot_Context_ModifiedContext_ModifiedDrops
+  commentId: F:Loot.Context.ModifiedContext.ModifiedDrops
+  fullName: Loot.Context.ModifiedContext.ModifiedDrops
+  nameWithType: ModifiedContext.ModifiedDrops
 - uid: Loot.Context.ModifyContext
   name: ModifyContext
   href: api/Loot.Context.ModifyContext.html
   commentId: T:Loot.Context.ModifyContext
   fullName: Loot.Context.ModifyContext
   nameWithType: ModifyContext
-- uid: Loot.Context.ModifyContext.#ctor
-  name: ModifyContext()
-  href: api/Loot.Context.ModifyContext.html#Loot_Context_ModifyContext__ctor
-  commentId: M:Loot.Context.ModifyContext.#ctor
-  fullName: Loot.Context.ModifyContext.ModifyContext()
-  nameWithType: ModifyContext.ModifyContext()
-- uid: Loot.Context.ModifyContext.#ctor(Loot.Drop,System.Collections.Generic.List{Loot.Drop})
-  name: ModifyContext(Drop, List<Drop>)
-  href: api/Loot.Context.ModifyContext.html#Loot_Context_ModifyContext__ctor_Loot_Drop_System_Collections_Generic_List_Loot_Drop__
-  commentId: M:Loot.Context.ModifyContext.#ctor(Loot.Drop,System.Collections.Generic.List{Loot.Drop})
-  name.vb: ModifyContext(Drop, List(Of Drop))
-  fullName: Loot.Context.ModifyContext.ModifyContext(Loot.Drop, System.Collections.Generic.List<Loot.Drop>)
-  fullName.vb: Loot.Context.ModifyContext.ModifyContext(Loot.Drop, System.Collections.Generic.List(Of Loot.Drop))
-  nameWithType: ModifyContext.ModifyContext(Drop, List<Drop>)
-  nameWithType.vb: ModifyContext.ModifyContext(Drop, List(Of Drop))
+- uid: Loot.Context.ModifyContext.#ctor(Loot.Drop)
+  name: ModifyContext(Drop)
+  href: api/Loot.Context.ModifyContext.html#Loot_Context_ModifyContext__ctor_Loot_Drop_
+  commentId: M:Loot.Context.ModifyContext.#ctor(Loot.Drop)
+  fullName: Loot.Context.ModifyContext.ModifyContext(Loot.Drop)
+  nameWithType: ModifyContext.ModifyContext(Drop)
 - uid: Loot.Context.ModifyContext.#ctor*
   name: ModifyContext
   href: api/Loot.Context.ModifyContext.html#Loot_Context_ModifyContext__ctor_
@@ -308,24 +287,12 @@ references:
   isSpec: "True"
   fullName: Loot.Context.ModifyContext.ModifyContext
   nameWithType: ModifyContext.ModifyContext
-- uid: Loot.Context.ModifyContext.currentDrop
-  name: currentDrop
-  href: api/Loot.Context.ModifyContext.html#Loot_Context_ModifyContext_currentDrop
-  commentId: F:Loot.Context.ModifyContext.currentDrop
-  fullName: Loot.Context.ModifyContext.currentDrop
-  nameWithType: ModifyContext.currentDrop
-- uid: Loot.Context.ModifyContext.modifiedDrops
-  name: modifiedDrops
-  href: api/Loot.Context.ModifyContext.html#Loot_Context_ModifyContext_modifiedDrops
-  commentId: F:Loot.Context.ModifyContext.modifiedDrops
-  fullName: Loot.Context.ModifyContext.modifiedDrops
-  nameWithType: ModifyContext.modifiedDrops
-- uid: Loot.Context.ModifyContext.table
-  name: table
-  href: api/Loot.Context.ModifyContext.html#Loot_Context_ModifyContext_table
-  commentId: F:Loot.Context.ModifyContext.table
-  fullName: Loot.Context.ModifyContext.table
-  nameWithType: ModifyContext.table
+- uid: Loot.Context.ModifyContext.CurrentDrop
+  name: CurrentDrop
+  href: api/Loot.Context.ModifyContext.html#Loot_Context_ModifyContext_CurrentDrop
+  commentId: F:Loot.Context.ModifyContext.CurrentDrop
+  fullName: Loot.Context.ModifyContext.CurrentDrop
+  nameWithType: ModifyContext.CurrentDrop
 - uid: Loot.Data
   name: Loot.Data
   href: api/Loot.Data.html

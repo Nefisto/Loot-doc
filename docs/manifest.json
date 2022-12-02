@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Loot.Context.ModifiedContext.html",
-          "hash": "QPf5dLE/+Qo8RhPatZ1myzpLjBltAd+I32ZcO8Ckbv8="
+          "hash": "FTaGAogqzMRHmeKfFSdvzfu8OSMc1DfRTLJcLOcd4NY="
         }
       },
       "is_incremental": true,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Loot.Context.ModifyContext.html",
-          "hash": "ni5DXkrvp2CCvWbucvzwPFfZkGWuct5hxBpc6T6c1fA="
+          "hash": "yXqU3Pmkf75MLddZAkOkDvplTOODZ5gs5dwddAw4dpE="
         }
       },
       "is_incremental": true,
@@ -252,7 +252,7 @@
           "hash": "g79TKpovN3f+etRT20XCtb0w1YkB9rOJz4tlGJKQ2sk="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -277,6 +277,28 @@
         }
       },
       "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "manual/images/gif_guaranteed.gif",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/gif_guaranteed.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "manual/images/gif_hidden.gif",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/gif_hidden.gif"
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -336,17 +358,18 @@
     },
     {
       "log_codes": [
-        "InvalidYamlHeader"
+        "InvalidYamlHeader",
+        "InvalidFileLink"
       ],
       "type": "Conceptual",
       "source_relative_path": "manual/overview.md",
       "output": {
         ".html": {
           "relative_path": "manual/overview.html",
-          "hash": "qwNdJmWhwR3M8EUwetH2QdguOuzKYfyP52ITv3bPvr4="
+          "hash": "MC0h3SAJxBkZvQuQNGN1LXPTu6Bjs+lfIWhtwzpglJ8="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -370,7 +393,7 @@
           "hash": "/7lHmIwkaQM3UjzNJ49lLp5w5Ioc3wKIJtAHp76CP30="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
