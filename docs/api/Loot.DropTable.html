@@ -80,90 +80,23 @@
     <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Loot.Drop.html">Drop</a>&gt;</div>
     <div><span class="xref">System.Collections.IEnumerable</span></div>
   </div>
-  <h3 id="fields">Fields
+  <h3 id="properties">Properties
   </h3>
   
   
-  <h4 id="Loot_DropTable_drops" data-uid="Loot.DropTable.drops">drops</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[SerializeField]
-public List&lt;Drop&gt; drops</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Loot.Drop.html">Drop</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Loot_DropTable_percentageCalculation" data-uid="Loot.DropTable.percentageCalculation">percentageCalculation</h4>
-  <div class="markdown level1 summary"><p>This decides the method used to calculate the drops percentage.</p>
-<p>
-<p>You can get more info about different calculations methods on <a class="xref" href="Loot.Enum.PercentageCalculation.html">PercentageCalculation</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PercentageCalculation percentageCalculation</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Loot.Enum.PercentageCalculation.html">PercentageCalculation</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Loot_DropTable_tableDescription" data-uid="Loot.DropTable.tableDescription">tableDescription</h4>
+  <a id="Loot_DropTable_Description_" data-uid="Loot.DropTable.Description*"></a>
+  <h4 id="Loot_DropTable_Description" data-uid="Loot.DropTable.Description">Description</h4>
   <div class="markdown level1 summary"><p>Table description</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Multiline]
-[Delayed]
-public string tableDescription</code></pre>
+    <pre><code class="lang-csharp hljs">public string Description { get; set; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
-  <h4 id="Loot_DropTable_tableIcon" data-uid="Loot.DropTable.tableIcon">tableIcon</h4>
+  <a id="Loot_DropTable_Icon_" data-uid="Loot.DropTable.Icon*"></a>
+  <h4 id="Loot_DropTable_Icon" data-uid="Loot.DropTable.Icon">Icon</h4>
   <div class="markdown level1 summary"><p>Provide an icon to the table.
 <p>
 <p>It`s normally used when you want to list the table as a drop in some list.</p></p>
@@ -171,35 +104,20 @@ public string tableDescription</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Used in cases that you want to show the table as a drop in some HUD&quot;)]
-public Sprite tableIcon</code></pre>
+    <pre><code class="lang-csharp hljs">public Sprite Icon { get; set; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">UnityEngine.Sprite</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
   
   
-  <a id="Loot_DropTable_Count_" data-uid="Loot.DropTable.Count*"></a>
-  <h4 id="Loot_DropTable_Count" data-uid="Loot.DropTable.Count">Count</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Loot_DropTable_PercentageCalculation_" data-uid="Loot.DropTable.PercentageCalculation*"></a>
+  <h4 id="Loot_DropTable_PercentageCalculation" data-uid="Loot.DropTable.PercentageCalculation">PercentageCalculation</h4>
+  <div class="markdown level1 summary"><p>This decides the method used to calculate the drops percentage.</p>
+<p>
+<p>You can get more info about different calculations methods on <a class="xref" href="Loot.DropTable.html#Loot_DropTable_PercentageCalculation">PercentageCalculation</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public PercentageCalculation PercentageCalculation { get; set; }</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -263,14 +181,17 @@ public Sprite tableIcon</code></pre>
   
   
   
-  <a id="Loot_DropTable_DeepEnumerator_" data-uid="Loot.DropTable.DeepEnumerator*"></a>
-  <h4 id="Loot_DropTable_DeepEnumerator" data-uid="Loot.DropTable.DeepEnumerator">DeepEnumerator()</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Loot_DropTable_CustomEnumerator_" data-uid="Loot.DropTable.CustomEnumerator*"></a>
+  <h4 id="Loot_DropTable_CustomEnumerator_Loot_Enum_Filter_" data-uid="Loot.DropTable.CustomEnumerator(Loot.Enum.Filter)">CustomEnumerator(Filter)</h4>
+  <div class="markdown level1 summary"><p>Here you can specify what kind of drops that you want to receive, take a look at <a class="xref" href="Loot.Enum.Filter.html">Filter</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Drop&gt; DeepEnumerator()</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Drop&gt; CustomEnumerator(Filter settings)</code></pre>
   </div>
+    
+  
   
   
   <a id="Loot_DropTable_DeepEquals_" data-uid="Loot.DropTable.DeepEquals*"></a>
@@ -287,7 +208,8 @@ public Sprite tableIcon</code></pre>
   
   <a id="Loot_DropTable_Drop_" data-uid="Loot.DropTable.Drop*"></a>
   <h4 id="Loot_DropTable_Drop_System_Action_Loot_Context_BeforeDropContext__System_Func_System_Collections_Generic_List_Loot_Drop__Loot_Bag__System_Action_Loot_Context_AfterDropContext__System_Boolean_" data-uid="Loot.DropTable.Drop(System.Action{Loot.Context.BeforeDropContext},System.Func{System.Collections.Generic.List{Loot.Drop},Loot.Bag},System.Action{Loot.Context.AfterDropContext},System.Boolean)">Drop(Action&lt;BeforeDropContext&gt;, Func&lt;List&lt;Drop&gt;, Bag&gt;, Action&lt;AfterDropContext&gt;, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>API to request a drop</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -295,16 +217,6 @@ public Sprite tableIcon</code></pre>
   </div>
     
   
-  
-  
-  <a id="Loot_DropTable_DropAndRerollTables_" data-uid="Loot.DropTable.DropAndRerollTables*"></a>
-  <h4 id="Loot_DropTable_DropAndRerollTables" data-uid="Loot.DropTable.DropAndRerollTables">DropAndRerollTables()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Bag DropAndRerollTables()</code></pre>
-  </div>
   
   
   <a id="Loot_DropTable_GetEnumerator_" data-uid="Loot.DropTable.GetEnumerator*"></a>
@@ -505,6 +417,19 @@ DropTable.Load(runtimeTable, loadedData);
   </table>
   
   
+  <a id="Loot_DropTable_RawEnumerator_" data-uid="Loot.DropTable.RawEnumerator*"></a>
+  <h4 id="Loot_DropTable_RawEnumerator" data-uid="Loot.DropTable.RawEnumerator">RawEnumerator()</h4>
+  <div class="markdown level1 summary"><p>This enumerator will provide you the original drops that you see in the inspector, including hidden drops
+without open the extensions and not applying any modify or filter.
+[WARNING] Be careful as this returns to you the actual drops list, so changes on it will be permanent.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Drop&gt; RawEnumerator()</code></pre>
+  </div>
+  
+  
   <a id="Loot_DropTable_RemoveDrop_" data-uid="Loot.DropTable.RemoveDrop*"></a>
   <h4 id="Loot_DropTable_RemoveDrop_Loot_Drop_" data-uid="Loot.DropTable.RemoveDrop(Loot.Drop)">RemoveDrop(Drop)</h4>
   <div class="markdown level1 summary"></div>
@@ -665,12 +590,30 @@ using (var sw = new StreamWriter(Application.persistentDataPath + &quot;/save.js
   
   <a id="Loot_DropTable_SumOfWeights_" data-uid="Loot.DropTable.SumOfWeights*"></a>
   <h4 id="Loot_DropTable_SumOfWeights" data-uid="Loot.DropTable.SumOfWeights">SumOfWeights()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This will open extensions, remove hidden, remove duplications apply modifiers and filters and THEN
+give the sum of weight to you</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int SumOfWeights()</code></pre>
   </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The sum of drop`s weight</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="events">Events
   </h3>
   

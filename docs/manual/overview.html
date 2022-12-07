@@ -232,6 +232,44 @@ private bool MyFilterRule (Drop drop)
 <p><strong>Important:</strong> Note that we can enable it on <em>_Common wolf drop</em> entry and can&#39;t on <em>Teeth</em> entry. This option will be enabled only when the entry is another <strong>Drop Table</strong> AND the <a href="overview.html#percentage-calculation">percentage calculation</a> between two table are equal.</p>
 <p>When this option is enabled the entry will not be treated as a drop (so you will not get it when iterating over this table, instead you will get the union between two drop tables), and in the case that your table is a weighted one, the weight from inner tables will interfere in outer tables, as we can see in the following gif.</p>
 <p><img src="images/sample_innerDropChangeWeight.gif" alt=""></p>
+<hr>
+<h3 id="enumerators">Enumerators</h3>
+<p>​   We provide some enumerators to allow you to have different views of the current table, you can change the view altering fields of the <a href="./../api/Loot.Enum.Filter.html">Filter</a> when calling a custom enumerator or can use some of the our pre made enumerators.</p>
+<h4 id="default-enumerator">Default enumerator</h4>
+<p>This is our implementation of <code>IEnumerable&lt;Drop&gt;</code>, it will internally call the default behavior of the <em>custom enumerator</em> that is:</p>
+<ul>
+<li>Include all drops that isn&#39;t hidden nor extensions</li>
+<li>Open all extension drops until we have none of them OR have reach at max depth, this maximum can be changed on <a href="./../api/Loot.LootSettings.html">Loot.Settings</a></li>
+<li>Remove all drops marked as <a href="overview.html#hidden">hidden</a></li>
+<li>Clone all drops and</li>
+<li>Apply all the modifiers and filter</li>
+</ul>
+<p><strong>NOTE:</strong> modifiers and filters are applied on runtime only, so calls used in the editor will skip those invocations</p>
+<pre><code class="lang-c#">foreach (var drop in monsterTable)
+{
+    // Do something...
+}
+</code></pre><h4 id="raw-enumerator">Raw enumerator</h4>
+<p>A sugar to give you the <strong>original</strong> plain drops, as you see them in the drop table inspector</p>
+<ul>
+<li>Include <strong>all ORIGINAL</strong> drops, which means that changes here will be permanent</li>
+<li>Do not open extensions, so will your receive just the properly extension drop</li>
+<li>Include hidden drops</li>
+<li>Does <strong>NOT</strong> apply any modifier or filter</li>
+</ul>
+<pre><code class="lang-c#">foreach (var drop in monsterTable.RawEnumerator())
+{
+    // Funny operations...    
+}
+</code></pre><h4 id="custom-enumerator">Custom enumerator</h4>
+<p>This is the base enumerator that others will rely on, all of them call this enumerator using custom filter settings, but you can call it yourself and set the view that you want to receive, for example</p>
+<pre><code class="lang-c#">var myCustomFilterSettings = Filter.IncludeHiddenDrops | Filter.DontInvokeLocalModify | Filter.DontInvokeLocalModified;
+foreach (var drop in monsterTable.CustomEnumerator(myCustomFilterSettings)) { }
+</code></pre><p>here we will receive the default behavior with the following changes</p>
+<ul>
+<li>We will <strong>include</strong> drops marked as <a href="overview.html#hidden">hidden</a></li>
+<li>We will skip the invocation of <strong>local modifiers</strong> </li>
+</ul>
 </article>
           </div>
           

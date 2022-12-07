@@ -215,3 +215,62 @@ Toggling it will make your drop to **not** appear on iterations, will **not** be
 When this option is enabled the entry will not be treated as a drop (so you will not get it when iterating over this table, instead you will get the union between two drop tables), and in the case that your table is a weighted one, the weight from inner tables will interfere in outer tables, as we can see in the following gif.
 
 ![](images\sample_innerDropChangeWeight.gif)
+
+---
+
+### Enumerators
+
+​	We provide some enumerators to allow you to have different views of the current table, you can change the view altering fields of the [Filter](./../api/Loot.Enum.Filter.html) when calling a custom enumerator or can use some of the our pre made enumerators.
+
+#### Default enumerator
+
+This is our implementation of ```IEnumerable<Drop>```, it will internally call the default behavior of the *custom enumerator* that is:
+
+* Include all drops that isn't hidden nor extensions
+* Open all extension drops until we have none of them OR have reach at max depth, this maximum can be changed on [Loot.Settings](./../api/Loot.LootSettings.html)
+* Remove all drops marked as [hidden](./overview.md#hidden)
+* Clone all drops and
+* Apply all the modifiers and filter
+
+**NOTE:** modifiers and filters are applied on runtime only, so calls used in the editor will skip those invocations
+
+```c#
+foreach (var drop in monsterTable)
+{
+    // Do something...
+}
+```
+
+
+
+#### Raw enumerator
+
+A sugar to give you the **original** plain drops, as you see them in the drop table inspector
+
+* Include **all ORIGINAL** drops, which means that changes here will be permanent
+* Do not open extensions, so will your receive just the properly extension drop
+* Include hidden drops
+* Does **NOT** apply any modifier or filter
+
+```c#
+foreach (var drop in monsterTable.RawEnumerator())
+{
+    // Funny operations...    
+}
+```
+
+
+
+#### Custom enumerator
+
+This is the base enumerator that others will rely on, all of them call this enumerator using custom filter settings, but you can call it yourself and set the view that you want to receive, for example
+
+```c#
+var myCustomFilterSettings = Filter.IncludeHiddenDrops | Filter.DontInvokeLocalModify | Filter.DontInvokeLocalModified;
+foreach (var drop in monsterTable.CustomEnumerator(myCustomFilterSettings)) { }
+```
+
+here we will receive the default behavior with the following changes
+
+- We will **include** drops marked as [hidden](./overview.md#hidden)
+- We will skip the invocation of **local modifiers** 

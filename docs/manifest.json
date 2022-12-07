@@ -165,7 +165,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Loot.Drop.html",
-          "hash": "u8VcuTVJYJSxsmZ5wJmoqO6ttKtQ2MZizjYelwwL5eU="
+          "hash": "LTVPiH5P639xFaUsquiKpfsW4dcXeekUkF/6UI4M4WM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Loot.DropSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Loot.DropSettings.html",
+          "hash": "yPlgF4y6vmP0TtlStY/8B5nHPQJb2efTBcIdNXHKSnc="
         }
       },
       "is_incremental": true,
@@ -177,7 +189,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Loot.DropTable.html",
-          "hash": "Nf+ArPi6kdlRaDxUSh3KGjEsG7s9BD3DJthWssDLepw="
+          "hash": "Hhj2VUGlqMDgXBcB5CcBpdptFf1FEQoFfVEZMQ9/H6s="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Loot.Enum.Filter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Loot.Enum.Filter.html",
+          "hash": "U/ZMDZPLRKTLF/dUNRL/Y3I8Ll3ef/BrjbiUYrY5dfI="
         }
       },
       "is_incremental": true,
@@ -201,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Loot.Enum.html",
-          "hash": "YoWBtvDAWSzE3hXVsW49QGJ/BuHAmUl3HPlKm25MR2g="
+          "hash": "NkIfVfO3IT64TNzQgrrjIDYwws40TtNMOMsi0v6UN1k="
         }
       },
       "is_incremental": true,
@@ -237,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Loot.html",
-          "hash": "warTaXIPqYn0zX0ymoMX6nYgHbQMHXkoI2VbsWxyZDI="
+          "hash": "Jw8OZrhuYPVRSpDQQIM7SRZfFpPmo33SkCFgUimkD2o="
         }
       },
       "is_incremental": true,
@@ -261,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "4ljIeGoTxHGybI2gAJcOiz9lxiVy6UhwH340ZKwZn9E="
+          "hash": "LEavjLOvaqkYseJv2pS1usHSnojApRLBvOLtdkJeUKU="
         }
       },
       "is_incremental": false,
@@ -366,7 +390,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/overview.html",
-          "hash": "MC0h3SAJxBkZvQuQNGN1LXPTu6Bjs+lfIWhtwzpglJ8="
+          "hash": "BNNB18OqriJfOXbJNdaOdDdZaGJ55T7sx7OKrHMu8CQ="
         }
       },
       "is_incremental": false,
@@ -439,8 +463,8 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 20,
-          "skipped_file_count": 20
+          "total_file_count": 22,
+          "skipped_file_count": 22
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

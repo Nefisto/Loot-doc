@@ -424,12 +424,12 @@ references:
   commentId: T:Loot.Drop
   fullName: Loot.Drop
   nameWithType: Drop
-- uid: Loot.Drop.#ctor
-  name: Drop()
-  href: api/Loot.Drop.html#Loot_Drop__ctor
-  commentId: M:Loot.Drop.#ctor
-  fullName: Loot.Drop.Drop()
-  nameWithType: Drop.Drop()
+- uid: Loot.Drop.#ctor(UnityEngine.ScriptableObject,UnityEngine.Vector2Int,System.Int32,System.Int32,Loot.DropSettings)
+  name: Drop(ScriptableObject, Vector2Int, Int32, Int32, DropSettings)
+  href: api/Loot.Drop.html#Loot_Drop__ctor_UnityEngine_ScriptableObject_UnityEngine_Vector2Int_System_Int32_System_Int32_Loot_DropSettings_
+  commentId: M:Loot.Drop.#ctor(UnityEngine.ScriptableObject,UnityEngine.Vector2Int,System.Int32,System.Int32,Loot.DropSettings)
+  fullName: Loot.Drop.Drop(UnityEngine.ScriptableObject, UnityEngine.Vector2Int, System.Int32, System.Int32, Loot.DropSettings)
+  nameWithType: Drop.Drop(ScriptableObject, Vector2Int, Int32, Int32, DropSettings)
 - uid: Loot.Drop.#ctor*
   name: Drop
   href: api/Loot.Drop.html#Loot_Drop__ctor_
@@ -667,6 +667,30 @@ references:
   isSpec: "True"
   fullName: Loot.Drop.Weight
   nameWithType: Drop.Weight
+- uid: Loot.DropSettings
+  name: DropSettings
+  href: api/Loot.DropSettings.html
+  commentId: T:Loot.DropSettings
+  fullName: Loot.DropSettings
+  nameWithType: DropSettings
+- uid: Loot.DropSettings.IsExtensionDrop
+  name: IsExtensionDrop
+  href: api/Loot.DropSettings.html#Loot_DropSettings_IsExtensionDrop
+  commentId: F:Loot.DropSettings.IsExtensionDrop
+  fullName: Loot.DropSettings.IsExtensionDrop
+  nameWithType: DropSettings.IsExtensionDrop
+- uid: Loot.DropSettings.IsGuaranteed
+  name: IsGuaranteed
+  href: api/Loot.DropSettings.html#Loot_DropSettings_IsGuaranteed
+  commentId: F:Loot.DropSettings.IsGuaranteed
+  fullName: Loot.DropSettings.IsGuaranteed
+  nameWithType: DropSettings.IsGuaranteed
+- uid: Loot.DropSettings.IsHidden
+  name: IsHidden
+  href: api/Loot.DropSettings.html#Loot_DropSettings_IsHidden
+  commentId: F:Loot.DropSettings.IsHidden
+  fullName: Loot.DropSettings.IsHidden
+  nameWithType: DropSettings.IsHidden
 - uid: Loot.DropTable
   name: DropTable
   href: api/Loot.DropTable.html
@@ -731,19 +755,6 @@ references:
   isSpec: "True"
   fullName: Loot.DropTable.Clone
   nameWithType: DropTable.Clone
-- uid: Loot.DropTable.Count
-  name: Count
-  href: api/Loot.DropTable.html#Loot_DropTable_Count
-  commentId: P:Loot.DropTable.Count
-  fullName: Loot.DropTable.Count
-  nameWithType: DropTable.Count
-- uid: Loot.DropTable.Count*
-  name: Count
-  href: api/Loot.DropTable.html#Loot_DropTable_Count_
-  commentId: Overload:Loot.DropTable.Count
-  isSpec: "True"
-  fullName: Loot.DropTable.Count
-  nameWithType: DropTable.Count
 - uid: Loot.DropTable.CustomDrop(System.Action{Loot.Drop})
   name: CustomDrop(Action<Drop>)
   href: api/Loot.DropTable.html#Loot_DropTable_CustomDrop_System_Action_Loot_Drop__
@@ -760,19 +771,19 @@ references:
   isSpec: "True"
   fullName: Loot.DropTable.CustomDrop
   nameWithType: DropTable.CustomDrop
-- uid: Loot.DropTable.DeepEnumerator
-  name: DeepEnumerator()
-  href: api/Loot.DropTable.html#Loot_DropTable_DeepEnumerator
-  commentId: M:Loot.DropTable.DeepEnumerator
-  fullName: Loot.DropTable.DeepEnumerator()
-  nameWithType: DropTable.DeepEnumerator()
-- uid: Loot.DropTable.DeepEnumerator*
-  name: DeepEnumerator
-  href: api/Loot.DropTable.html#Loot_DropTable_DeepEnumerator_
-  commentId: Overload:Loot.DropTable.DeepEnumerator
+- uid: Loot.DropTable.CustomEnumerator(Loot.Enum.Filter)
+  name: CustomEnumerator(Filter)
+  href: api/Loot.DropTable.html#Loot_DropTable_CustomEnumerator_Loot_Enum_Filter_
+  commentId: M:Loot.DropTable.CustomEnumerator(Loot.Enum.Filter)
+  fullName: Loot.DropTable.CustomEnumerator(Loot.Enum.Filter)
+  nameWithType: DropTable.CustomEnumerator(Filter)
+- uid: Loot.DropTable.CustomEnumerator*
+  name: CustomEnumerator
+  href: api/Loot.DropTable.html#Loot_DropTable_CustomEnumerator_
+  commentId: Overload:Loot.DropTable.CustomEnumerator
   isSpec: "True"
-  fullName: Loot.DropTable.DeepEnumerator
-  nameWithType: DropTable.DeepEnumerator
+  fullName: Loot.DropTable.CustomEnumerator
+  nameWithType: DropTable.CustomEnumerator
 - uid: Loot.DropTable.DeepEquals(Loot.DropTable)
   name: DeepEquals(DropTable)
   href: api/Loot.DropTable.html#Loot_DropTable_DeepEquals_Loot_DropTable_
@@ -786,6 +797,19 @@ references:
   isSpec: "True"
   fullName: Loot.DropTable.DeepEquals
   nameWithType: DropTable.DeepEquals
+- uid: Loot.DropTable.Description
+  name: Description
+  href: api/Loot.DropTable.html#Loot_DropTable_Description
+  commentId: P:Loot.DropTable.Description
+  fullName: Loot.DropTable.Description
+  nameWithType: DropTable.Description
+- uid: Loot.DropTable.Description*
+  name: Description
+  href: api/Loot.DropTable.html#Loot_DropTable_Description_
+  commentId: Overload:Loot.DropTable.Description
+  isSpec: "True"
+  fullName: Loot.DropTable.Description
+  nameWithType: DropTable.Description
 - uid: Loot.DropTable.Drop(System.Action{Loot.Context.BeforeDropContext},System.Func{System.Collections.Generic.List{Loot.Drop},Loot.Bag},System.Action{Loot.Context.AfterDropContext},System.Boolean)
   name: Drop(Action<BeforeDropContext>, Func<List<Drop>, Bag>, Action<AfterDropContext>, Boolean)
   href: api/Loot.DropTable.html#Loot_DropTable_Drop_System_Action_Loot_Context_BeforeDropContext__System_Func_System_Collections_Generic_List_Loot_Drop__Loot_Bag__System_Action_Loot_Context_AfterDropContext__System_Boolean_
@@ -802,25 +826,6 @@ references:
   isSpec: "True"
   fullName: Loot.DropTable.Drop
   nameWithType: DropTable.Drop
-- uid: Loot.DropTable.DropAndRerollTables
-  name: DropAndRerollTables()
-  href: api/Loot.DropTable.html#Loot_DropTable_DropAndRerollTables
-  commentId: M:Loot.DropTable.DropAndRerollTables
-  fullName: Loot.DropTable.DropAndRerollTables()
-  nameWithType: DropTable.DropAndRerollTables()
-- uid: Loot.DropTable.DropAndRerollTables*
-  name: DropAndRerollTables
-  href: api/Loot.DropTable.html#Loot_DropTable_DropAndRerollTables_
-  commentId: Overload:Loot.DropTable.DropAndRerollTables
-  isSpec: "True"
-  fullName: Loot.DropTable.DropAndRerollTables
-  nameWithType: DropTable.DropAndRerollTables
-- uid: Loot.DropTable.drops
-  name: drops
-  href: api/Loot.DropTable.html#Loot_DropTable_drops
-  commentId: F:Loot.DropTable.drops
-  fullName: Loot.DropTable.drops
-  nameWithType: DropTable.drops
 - uid: Loot.DropTable.GetEnumerator
   name: GetEnumerator()
   href: api/Loot.DropTable.html#Loot_DropTable_GetEnumerator
@@ -834,6 +839,19 @@ references:
   isSpec: "True"
   fullName: Loot.DropTable.GetEnumerator
   nameWithType: DropTable.GetEnumerator
+- uid: Loot.DropTable.Icon
+  name: Icon
+  href: api/Loot.DropTable.html#Loot_DropTable_Icon
+  commentId: P:Loot.DropTable.Icon
+  fullName: Loot.DropTable.Icon
+  nameWithType: DropTable.Icon
+- uid: Loot.DropTable.Icon*
+  name: Icon
+  href: api/Loot.DropTable.html#Loot_DropTable_Icon_
+  commentId: Overload:Loot.DropTable.Icon
+  isSpec: "True"
+  fullName: Loot.DropTable.Icon
+  nameWithType: DropTable.Icon
 - uid: Loot.DropTable.Load(Loot.Data.DropTableSaveData,Loot.Params.LoadParams)
   name: Load(DropTableSaveData, LoadParams)
   href: api/Loot.DropTable.html#Loot_DropTable_Load_Loot_Data_DropTableSaveData_Loot_Params_LoadParams_
@@ -902,12 +920,32 @@ references:
   commentId: E:Loot.DropTable.OnLocalModify
   fullName: Loot.DropTable.OnLocalModify
   nameWithType: DropTable.OnLocalModify
-- uid: Loot.DropTable.percentageCalculation
-  name: percentageCalculation
-  href: api/Loot.DropTable.html#Loot_DropTable_percentageCalculation
-  commentId: F:Loot.DropTable.percentageCalculation
-  fullName: Loot.DropTable.percentageCalculation
-  nameWithType: DropTable.percentageCalculation
+- uid: Loot.DropTable.PercentageCalculation
+  name: PercentageCalculation
+  href: api/Loot.DropTable.html#Loot_DropTable_PercentageCalculation
+  commentId: P:Loot.DropTable.PercentageCalculation
+  fullName: Loot.DropTable.PercentageCalculation
+  nameWithType: DropTable.PercentageCalculation
+- uid: Loot.DropTable.PercentageCalculation*
+  name: PercentageCalculation
+  href: api/Loot.DropTable.html#Loot_DropTable_PercentageCalculation_
+  commentId: Overload:Loot.DropTable.PercentageCalculation
+  isSpec: "True"
+  fullName: Loot.DropTable.PercentageCalculation
+  nameWithType: DropTable.PercentageCalculation
+- uid: Loot.DropTable.RawEnumerator
+  name: RawEnumerator()
+  href: api/Loot.DropTable.html#Loot_DropTable_RawEnumerator
+  commentId: M:Loot.DropTable.RawEnumerator
+  fullName: Loot.DropTable.RawEnumerator()
+  nameWithType: DropTable.RawEnumerator()
+- uid: Loot.DropTable.RawEnumerator*
+  name: RawEnumerator
+  href: api/Loot.DropTable.html#Loot_DropTable_RawEnumerator_
+  commentId: Overload:Loot.DropTable.RawEnumerator
+  isSpec: "True"
+  fullName: Loot.DropTable.RawEnumerator
+  nameWithType: DropTable.RawEnumerator
 - uid: Loot.DropTable.RemoveDrop(Loot.Drop)
   name: RemoveDrop(Drop)
   href: api/Loot.DropTable.html#Loot_DropTable_RemoveDrop_Loot_Drop_
@@ -970,24 +1008,72 @@ references:
   fullName: Loot.DropTable.System.Collections.IEnumerable.GetEnumerator
   nameWithType: DropTable.IEnumerable.GetEnumerator
   nameWithType.vb: DropTable.System.Collections.IEnumerable.GetEnumerator
-- uid: Loot.DropTable.tableDescription
-  name: tableDescription
-  href: api/Loot.DropTable.html#Loot_DropTable_tableDescription
-  commentId: F:Loot.DropTable.tableDescription
-  fullName: Loot.DropTable.tableDescription
-  nameWithType: DropTable.tableDescription
-- uid: Loot.DropTable.tableIcon
-  name: tableIcon
-  href: api/Loot.DropTable.html#Loot_DropTable_tableIcon
-  commentId: F:Loot.DropTable.tableIcon
-  fullName: Loot.DropTable.tableIcon
-  nameWithType: DropTable.tableIcon
 - uid: Loot.Enum
   name: Loot.Enum
   href: api/Loot.Enum.html
   commentId: N:Loot.Enum
   fullName: Loot.Enum
   nameWithType: Loot.Enum
+- uid: Loot.Enum.Filter
+  name: Filter
+  href: api/Loot.Enum.Filter.html
+  commentId: T:Loot.Enum.Filter
+  fullName: Loot.Enum.Filter
+  nameWithType: Filter
+- uid: Loot.Enum.Filter.Default
+  name: Default
+  href: api/Loot.Enum.Filter.html#Loot_Enum_Filter_Default
+  commentId: F:Loot.Enum.Filter.Default
+  fullName: Loot.Enum.Filter.Default
+  nameWithType: Filter.Default
+- uid: Loot.Enum.Filter.DontInvokeGlobalModified
+  name: DontInvokeGlobalModified
+  href: api/Loot.Enum.Filter.html#Loot_Enum_Filter_DontInvokeGlobalModified
+  commentId: F:Loot.Enum.Filter.DontInvokeGlobalModified
+  fullName: Loot.Enum.Filter.DontInvokeGlobalModified
+  nameWithType: Filter.DontInvokeGlobalModified
+- uid: Loot.Enum.Filter.DontInvokeGlobalModify
+  name: DontInvokeGlobalModify
+  href: api/Loot.Enum.Filter.html#Loot_Enum_Filter_DontInvokeGlobalModify
+  commentId: F:Loot.Enum.Filter.DontInvokeGlobalModify
+  fullName: Loot.Enum.Filter.DontInvokeGlobalModify
+  nameWithType: Filter.DontInvokeGlobalModify
+- uid: Loot.Enum.Filter.DontInvokeLocalModified
+  name: DontInvokeLocalModified
+  href: api/Loot.Enum.Filter.html#Loot_Enum_Filter_DontInvokeLocalModified
+  commentId: F:Loot.Enum.Filter.DontInvokeLocalModified
+  fullName: Loot.Enum.Filter.DontInvokeLocalModified
+  nameWithType: Filter.DontInvokeLocalModified
+- uid: Loot.Enum.Filter.DontInvokeLocalModify
+  name: DontInvokeLocalModify
+  href: api/Loot.Enum.Filter.html#Loot_Enum_Filter_DontInvokeLocalModify
+  commentId: F:Loot.Enum.Filter.DontInvokeLocalModify
+  fullName: Loot.Enum.Filter.DontInvokeLocalModify
+  nameWithType: Filter.DontInvokeLocalModify
+- uid: Loot.Enum.Filter.DontInvokeTableFilter
+  name: DontInvokeTableFilter
+  href: api/Loot.Enum.Filter.html#Loot_Enum_Filter_DontInvokeTableFilter
+  commentId: F:Loot.Enum.Filter.DontInvokeTableFilter
+  fullName: Loot.Enum.Filter.DontInvokeTableFilter
+  nameWithType: Filter.DontInvokeTableFilter
+- uid: Loot.Enum.Filter.IncludeExtensions
+  name: IncludeExtensions
+  href: api/Loot.Enum.Filter.html#Loot_Enum_Filter_IncludeExtensions
+  commentId: F:Loot.Enum.Filter.IncludeExtensions
+  fullName: Loot.Enum.Filter.IncludeExtensions
+  nameWithType: Filter.IncludeExtensions
+- uid: Loot.Enum.Filter.IncludeHiddenDrops
+  name: IncludeHiddenDrops
+  href: api/Loot.Enum.Filter.html#Loot_Enum_Filter_IncludeHiddenDrops
+  commentId: F:Loot.Enum.Filter.IncludeHiddenDrops
+  fullName: Loot.Enum.Filter.IncludeHiddenDrops
+  nameWithType: Filter.IncludeHiddenDrops
+- uid: Loot.Enum.Filter.OriginalDrops
+  name: OriginalDrops
+  href: api/Loot.Enum.Filter.html#Loot_Enum_Filter_OriginalDrops
+  commentId: F:Loot.Enum.Filter.OriginalDrops
+  fullName: Loot.Enum.Filter.OriginalDrops
+  nameWithType: Filter.OriginalDrops
 - uid: Loot.Enum.PercentageCalculation
   name: PercentageCalculation
   href: api/Loot.Enum.PercentageCalculation.html

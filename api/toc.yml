@@ -6,6 +6,8 @@
     name: Bag
   - uid: Loot.Drop
     name: Drop
+  - uid: Loot.DropSettings
+    name: DropSettings
   - uid: Loot.DropTable
     name: DropTable
   - uid: Loot.Loot
@@ -41,5 +43,7 @@
 - uid: Loot.Enum
   name: Loot.Enum
   items:
+  - uid: Loot.Enum.Filter
+    name: Filter
   - uid: Loot.Enum.PercentageCalculation
     name: PercentageCalculation
