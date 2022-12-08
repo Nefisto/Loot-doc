@@ -20,11 +20,11 @@ Welcome to Loot documentation, it is separated into two parts, you can access bo
 
 # Contact and acknowledge
 
-Thanks for buying and supporting my work. I hope that it helps you to bring your dream game to life, and please if you have some suggestions, critique or question does not hesitate to enter in contact through email or discord.
+Thanks for buying and supporting my work. I hope that it helps you to bring your dream game to life, and please if you have some suggestions, critique, reclamation, question or want to request some feature does not hesitate to enter in contact through email or discord.
 
 **Developer contact**
 
 * Email: joao.gavron@gmail.com
 * Discord: Nefisto#3403
 
-doc version (follow asset version): 1.2.0
+doc version (follow asset version, but patch): 1.3

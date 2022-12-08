@@ -228,6 +228,7 @@ This is our implementation of ```IEnumerable<Drop>```, it will internally call t
 
 * Include all drops that isn't hidden nor extensions
 * Open all extension drops until we have none of them OR have reach at max depth, this maximum can be changed on [Loot.Settings](./../api/Loot.LootSettings.html)
+* While opening extensions **skip** tables that are already added (check repetition by table reference)
 * Remove all drops marked as [hidden](./overview.md#hidden)
 * Clone all drops and
 * Apply all the modifiers and filter
@@ -249,6 +250,7 @@ A sugar to give you the **original** plain drops, as you see them in the drop ta
 
 * Include **all ORIGINAL** drops, which means that changes here will be permanent
 * Do not open extensions, so will your receive just the properly extension drop
+* As we don't open extensions we check for repetitions
 * Include hidden drops
 * Does **NOT** apply any modifier or filter
 
