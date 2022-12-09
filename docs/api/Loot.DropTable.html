@@ -80,6 +80,104 @@
     <div><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Loot.Drop.html">Drop</a>&gt;</div>
     <div><span class="xref">System.Collections.IEnumerable</span></div>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Loot_DropTable_OnGlobalModified" data-uid="Loot.DropTable.OnGlobalModified">OnGlobalModified</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Action&lt;ModifiedContext&gt; OnGlobalModified</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Loot.Context.ModifiedContext.html">ModifiedContext</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Loot_DropTable_OnGlobalModify" data-uid="Loot.DropTable.OnGlobalModify">OnGlobalModify</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Action&lt;ModifyContext&gt; OnGlobalModify</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Loot.Context.ModifyContext.html">ModifyContext</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Loot_DropTable_OnLocalModified" data-uid="Loot.DropTable.OnLocalModified">OnLocalModified</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;ModifiedContext&gt; OnLocalModified</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Loot.Context.ModifiedContext.html">ModifiedContext</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Loot_DropTable_OnLocalModify" data-uid="Loot.DropTable.OnLocalModify">OnLocalModify</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;ModifyContext&gt; OnLocalModify</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Loot.Context.ModifyContext.html">ModifyContext</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   
@@ -141,7 +239,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AddFilter(Predicate&lt;Drop&gt; filter)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use OnTableFilter instead&quot;)]
+public void AddFilter(Predicate&lt;Drop&gt; filter)</code></pre>
   </div>
     
   
@@ -170,12 +269,12 @@
   
   
   <a id="Loot_DropTable_CustomDrop_" data-uid="Loot.DropTable.CustomDrop*"></a>
-  <h4 id="Loot_DropTable_CustomDrop_System_Action_Loot_Drop__" data-uid="Loot.DropTable.CustomDrop(System.Action{Loot.Drop})">CustomDrop(Action&lt;Drop&gt;)</h4>
+  <h4 id="Loot_DropTable_CustomDrop_System_Int32_System_Func_System_Collections_Generic_List_Loot_Drop__Loot_Bag__System_Action_Loot_Context_DroppingContext__System_Action_Loot_Context_DroppedContext__" data-uid="Loot.DropTable.CustomDrop(System.Int32,System.Func{System.Collections.Generic.List{Loot.Drop},Loot.Bag},System.Action{Loot.Context.DroppingContext},System.Action{Loot.Context.DroppedContext})">CustomDrop(Int32, Func&lt;List&lt;Drop&gt;, Bag&gt;, Action&lt;DroppingContext&gt;, Action&lt;DroppedContext&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Bag CustomDrop(Action&lt;Drop&gt; action)</code></pre>
+    <pre><code class="lang-csharp hljs">public Bag CustomDrop(int numberOfDrops = 1, Func&lt;List&lt;Drop&gt;, Bag&gt; customDropBehaviour = null, Action&lt;DroppingContext&gt; beforeDropCallback = null, Action&lt;DroppedContext&gt; afterDropCallback = null)</code></pre>
   </div>
     
   
@@ -183,7 +282,8 @@
   
   <a id="Loot_DropTable_CustomEnumerator_" data-uid="Loot.DropTable.CustomEnumerator*"></a>
   <h4 id="Loot_DropTable_CustomEnumerator_Loot_Enum_Filter_" data-uid="Loot.DropTable.CustomEnumerator(Loot.Enum.Filter)">CustomEnumerator(Filter)</h4>
-  <div class="markdown level1 summary"><p>Here you can specify what kind of drops that you want to receive, take a look at <a class="xref" href="Loot.Enum.Filter.html">Filter</a></p>
+  <div class="markdown level1 summary"><p>Here you can specify what kind of drops that you want to receive, take a look at <a class="xref" href="Loot.Enum.Filter.html">Filter</a> on
+documentation</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -194,26 +294,14 @@
   
   
   
-  <a id="Loot_DropTable_DeepEquals_" data-uid="Loot.DropTable.DeepEquals*"></a>
-  <h4 id="Loot_DropTable_DeepEquals_Loot_DropTable_" data-uid="Loot.DropTable.DeepEquals(Loot.DropTable)">DeepEquals(DropTable)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool DeepEquals(DropTable other)</code></pre>
-  </div>
-    
-  
-  
-  
   <a id="Loot_DropTable_Drop_" data-uid="Loot.DropTable.Drop*"></a>
-  <h4 id="Loot_DropTable_Drop_System_Action_Loot_Context_BeforeDropContext__System_Func_System_Collections_Generic_List_Loot_Drop__Loot_Bag__System_Action_Loot_Context_AfterDropContext__System_Boolean_" data-uid="Loot.DropTable.Drop(System.Action{Loot.Context.BeforeDropContext},System.Func{System.Collections.Generic.List{Loot.Drop},Loot.Bag},System.Action{Loot.Context.AfterDropContext},System.Boolean)">Drop(Action&lt;BeforeDropContext&gt;, Func&lt;List&lt;Drop&gt;, Bag&gt;, Action&lt;AfterDropContext&gt;, Boolean)</h4>
+  <h4 id="Loot_DropTable_Drop_System_Int32_" data-uid="Loot.DropTable.Drop(System.Int32)">Drop(Int32)</h4>
   <div class="markdown level1 summary"><p>API to request a drop</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Bag Drop(Action&lt;BeforeDropContext&gt; beforeDrop = null, Func&lt;List&lt;Drop&gt;, Bag&gt; customDropBehavior = null, Action&lt;AfterDropContext&gt; afterDrop = null, bool useCustomizedDrops = true)</code></pre>
+    <pre><code class="lang-csharp hljs">public Bag Drop(int n = 1)</code></pre>
   </div>
     
   
@@ -395,26 +483,11 @@ DropTable.Load(runtimeTable, loadedData);
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Bag MultipleDrop(int n)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use Drop passing a parameter N instead&quot;)]
+public Bag MultipleDrop(int n)</code></pre>
   </div>
     
   
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.ArgumentException</span></td>
-        <td><p>&quot;N should be in range 0..10000. If you need more change in global settings.&quot;</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="Loot_DropTable_RawEnumerator_" data-uid="Loot.DropTable.RawEnumerator*"></a>
@@ -430,6 +503,17 @@ without open the extensions and not applying any modify or filter.
   </div>
   
   
+  <a id="Loot_DropTable_RemoveAllTableFilters_" data-uid="Loot.DropTable.RemoveAllTableFilters*"></a>
+  <h4 id="Loot_DropTable_RemoveAllTableFilters" data-uid="Loot.DropTable.RemoveAllTableFilters">RemoveAllTableFilters()</h4>
+  <div class="markdown level1 summary"><p>Clean filters from this table</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveAllTableFilters()</code></pre>
+  </div>
+  
+  
   <a id="Loot_DropTable_RemoveDrop_" data-uid="Loot.DropTable.RemoveDrop*"></a>
   <h4 id="Loot_DropTable_RemoveDrop_Loot_Drop_" data-uid="Loot.DropTable.RemoveDrop(Loot.Drop)">RemoveDrop(Drop)</h4>
   <div class="markdown level1 summary"></div>
@@ -437,6 +521,18 @@ without open the extensions and not applying any modify or filter.
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void RemoveDrop(Drop drop)</code></pre>
+  </div>
+    
+  
+  
+  
+  <a id="Loot_DropTable_RemoveDrop_" data-uid="Loot.DropTable.RemoveDrop*"></a>
+  <h4 id="Loot_DropTable_RemoveDrop_System_Predicate_Loot_Drop__" data-uid="Loot.DropTable.RemoveDrop(System.Predicate{Loot.Drop})">RemoveDrop(Predicate&lt;Drop&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveDrop(Predicate&lt;Drop&gt; predicate)</code></pre>
   </div>
     
   
@@ -618,12 +714,12 @@ give the sum of weight to you</p>
   </h3>
   
   
-  <h4 id="Loot_DropTable_OnDrop" data-uid="Loot.DropTable.OnDrop">OnDrop</h4>
+  <h4 id="Loot_DropTable_OnDropped" data-uid="Loot.DropTable.OnDropped">OnDropped</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event EventHandler&lt;DropContext&gt; OnDrop</code></pre>
+    <pre><code class="lang-csharp hljs">public event Action&lt;DroppedContext&gt; OnDropped</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -635,19 +731,19 @@ give the sum of weight to you</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Loot.Context.DropContext.html">DropContext</a>&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Loot.Context.DroppedContext.html">DroppedContext</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Loot_DropTable_OnFiltered" data-uid="Loot.DropTable.OnFiltered">OnFiltered</h4>
+  <h4 id="Loot_DropTable_OnDropping" data-uid="Loot.DropTable.OnDropping">OnDropping</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action&lt;FilteredContext&gt; OnFiltered</code></pre>
+    <pre><code class="lang-csharp hljs">public event Action&lt;DroppingContext&gt; OnDropping</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -659,19 +755,20 @@ give the sum of weight to you</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Loot.Context.FilteredContext.html">FilteredContext</a>&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Loot.Context.DroppingContext.html">DroppingContext</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Loot_DropTable_OnGlobalModified" data-uid="Loot.DropTable.OnGlobalModified">OnGlobalModified</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="Loot_DropTable_OnTableFilter" data-uid="Loot.DropTable.OnTableFilter">OnTableFilter</h4>
+  <div class="markdown level1 summary"><p>This will be called when iterating over the list to filter it</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static event Action&lt;ModifiedContext&gt; OnGlobalModified</code></pre>
+    <pre><code class="lang-csharp hljs">public event Predicate&lt;Drop&gt; OnTableFilter</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -683,79 +780,7 @@ give the sum of weight to you</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Loot.Context.ModifiedContext.html">ModifiedContext</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Loot_DropTable_OnGlobalModify" data-uid="Loot.DropTable.OnGlobalModify">OnGlobalModify</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static event Action&lt;ModifyContext&gt; OnGlobalModify</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Loot.Context.ModifyContext.html">ModifyContext</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Loot_DropTable_OnLocalModified" data-uid="Loot.DropTable.OnLocalModified">OnLocalModified</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action&lt;ModifiedContext&gt; OnLocalModified</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Loot.Context.ModifiedContext.html">ModifiedContext</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Loot_DropTable_OnLocalModify" data-uid="Loot.DropTable.OnLocalModify">OnLocalModify</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event Action&lt;ModifyContext&gt; OnLocalModify</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Loot.Context.ModifyContext.html">ModifyContext</a>&gt;</td>
+        <td><span class="xref">System.Predicate</span>&lt;<a class="xref" href="Loot.Drop.html">Drop</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

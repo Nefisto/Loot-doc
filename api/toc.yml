@@ -17,12 +17,10 @@
 - uid: Loot.Context
   name: Loot.Context
   items:
-  - uid: Loot.Context.AfterDropContext
-    name: AfterDropContext
-  - uid: Loot.Context.BeforeDropContext
-    name: BeforeDropContext
-  - uid: Loot.Context.DropContext
-    name: DropContext
+  - uid: Loot.Context.DroppedContext
+    name: DroppedContext
+  - uid: Loot.Context.DroppingContext
+    name: DroppingContext
   - uid: Loot.Context.FilterContext
     name: FilterContext
   - uid: Loot.Context.FilteredContext

@@ -45,102 +45,77 @@ references:
   commentId: N:Loot.Context
   fullName: Loot.Context
   nameWithType: Loot.Context
-- uid: Loot.Context.AfterDropContext
-  name: AfterDropContext
-  href: api/Loot.Context.AfterDropContext.html
-  commentId: T:Loot.Context.AfterDropContext
-  fullName: Loot.Context.AfterDropContext
-  nameWithType: AfterDropContext
-- uid: Loot.Context.AfterDropContext.#ctor(Loot.DropTable,Loot.Bag)
-  name: AfterDropContext(DropTable, Bag)
-  href: api/Loot.Context.AfterDropContext.html#Loot_Context_AfterDropContext__ctor_Loot_DropTable_Loot_Bag_
-  commentId: M:Loot.Context.AfterDropContext.#ctor(Loot.DropTable,Loot.Bag)
-  fullName: Loot.Context.AfterDropContext.AfterDropContext(Loot.DropTable, Loot.Bag)
-  nameWithType: AfterDropContext.AfterDropContext(DropTable, Bag)
-- uid: Loot.Context.AfterDropContext.#ctor*
-  name: AfterDropContext
-  href: api/Loot.Context.AfterDropContext.html#Loot_Context_AfterDropContext__ctor_
-  commentId: Overload:Loot.Context.AfterDropContext.#ctor
+- uid: Loot.Context.DroppedContext
+  name: DroppedContext
+  href: api/Loot.Context.DroppedContext.html
+  commentId: T:Loot.Context.DroppedContext
+  fullName: Loot.Context.DroppedContext
+  nameWithType: DroppedContext
+- uid: Loot.Context.DroppedContext.#ctor
+  name: DroppedContext()
+  href: api/Loot.Context.DroppedContext.html#Loot_Context_DroppedContext__ctor
+  commentId: M:Loot.Context.DroppedContext.#ctor
+  fullName: Loot.Context.DroppedContext.DroppedContext()
+  nameWithType: DroppedContext.DroppedContext()
+- uid: Loot.Context.DroppedContext.#ctor(Loot.DropTable,Loot.Bag)
+  name: DroppedContext(DropTable, Bag)
+  href: api/Loot.Context.DroppedContext.html#Loot_Context_DroppedContext__ctor_Loot_DropTable_Loot_Bag_
+  commentId: M:Loot.Context.DroppedContext.#ctor(Loot.DropTable,Loot.Bag)
+  fullName: Loot.Context.DroppedContext.DroppedContext(Loot.DropTable, Loot.Bag)
+  nameWithType: DroppedContext.DroppedContext(DropTable, Bag)
+- uid: Loot.Context.DroppedContext.#ctor*
+  name: DroppedContext
+  href: api/Loot.Context.DroppedContext.html#Loot_Context_DroppedContext__ctor_
+  commentId: Overload:Loot.Context.DroppedContext.#ctor
   isSpec: "True"
-  fullName: Loot.Context.AfterDropContext.AfterDropContext
-  nameWithType: AfterDropContext.AfterDropContext
-- uid: Loot.Context.AfterDropContext.droppedBag
-  name: droppedBag
-  href: api/Loot.Context.AfterDropContext.html#Loot_Context_AfterDropContext_droppedBag
-  commentId: F:Loot.Context.AfterDropContext.droppedBag
-  fullName: Loot.Context.AfterDropContext.droppedBag
-  nameWithType: AfterDropContext.droppedBag
-- uid: Loot.Context.AfterDropContext.table
-  name: table
-  href: api/Loot.Context.AfterDropContext.html#Loot_Context_AfterDropContext_table
-  commentId: F:Loot.Context.AfterDropContext.table
-  fullName: Loot.Context.AfterDropContext.table
-  nameWithType: AfterDropContext.table
-- uid: Loot.Context.BeforeDropContext
-  name: BeforeDropContext
-  href: api/Loot.Context.BeforeDropContext.html
-  commentId: T:Loot.Context.BeforeDropContext
-  fullName: Loot.Context.BeforeDropContext
-  nameWithType: BeforeDropContext
-- uid: Loot.Context.BeforeDropContext.#ctor(Loot.DropTable,System.Collections.Generic.List{Loot.Drop})
-  name: BeforeDropContext(DropTable, List<Drop>)
-  href: api/Loot.Context.BeforeDropContext.html#Loot_Context_BeforeDropContext__ctor_Loot_DropTable_System_Collections_Generic_List_Loot_Drop__
-  commentId: M:Loot.Context.BeforeDropContext.#ctor(Loot.DropTable,System.Collections.Generic.List{Loot.Drop})
-  name.vb: BeforeDropContext(DropTable, List(Of Drop))
-  fullName: Loot.Context.BeforeDropContext.BeforeDropContext(Loot.DropTable, System.Collections.Generic.List<Loot.Drop>)
-  fullName.vb: Loot.Context.BeforeDropContext.BeforeDropContext(Loot.DropTable, System.Collections.Generic.List(Of Loot.Drop))
-  nameWithType: BeforeDropContext.BeforeDropContext(DropTable, List<Drop>)
-  nameWithType.vb: BeforeDropContext.BeforeDropContext(DropTable, List(Of Drop))
-- uid: Loot.Context.BeforeDropContext.#ctor*
-  name: BeforeDropContext
-  href: api/Loot.Context.BeforeDropContext.html#Loot_Context_BeforeDropContext__ctor_
-  commentId: Overload:Loot.Context.BeforeDropContext.#ctor
+  fullName: Loot.Context.DroppedContext.DroppedContext
+  nameWithType: DroppedContext.DroppedContext
+- uid: Loot.Context.DroppedContext.DroppedBag
+  name: DroppedBag
+  href: api/Loot.Context.DroppedContext.html#Loot_Context_DroppedContext_DroppedBag
+  commentId: F:Loot.Context.DroppedContext.DroppedBag
+  fullName: Loot.Context.DroppedContext.DroppedBag
+  nameWithType: DroppedContext.DroppedBag
+- uid: Loot.Context.DroppedContext.Table
+  name: Table
+  href: api/Loot.Context.DroppedContext.html#Loot_Context_DroppedContext_Table
+  commentId: F:Loot.Context.DroppedContext.Table
+  fullName: Loot.Context.DroppedContext.Table
+  nameWithType: DroppedContext.Table
+- uid: Loot.Context.DroppingContext
+  name: DroppingContext
+  href: api/Loot.Context.DroppingContext.html
+  commentId: T:Loot.Context.DroppingContext
+  fullName: Loot.Context.DroppingContext
+  nameWithType: DroppingContext
+- uid: Loot.Context.DroppingContext.#ctor(Loot.DropTable,System.Collections.Generic.List{Loot.Drop})
+  name: DroppingContext(DropTable, List<Drop>)
+  href: api/Loot.Context.DroppingContext.html#Loot_Context_DroppingContext__ctor_Loot_DropTable_System_Collections_Generic_List_Loot_Drop__
+  commentId: M:Loot.Context.DroppingContext.#ctor(Loot.DropTable,System.Collections.Generic.List{Loot.Drop})
+  name.vb: DroppingContext(DropTable, List(Of Drop))
+  fullName: Loot.Context.DroppingContext.DroppingContext(Loot.DropTable, System.Collections.Generic.List<Loot.Drop>)
+  fullName.vb: Loot.Context.DroppingContext.DroppingContext(Loot.DropTable, System.Collections.Generic.List(Of Loot.Drop))
+  nameWithType: DroppingContext.DroppingContext(DropTable, List<Drop>)
+  nameWithType.vb: DroppingContext.DroppingContext(DropTable, List(Of Drop))
+- uid: Loot.Context.DroppingContext.#ctor*
+  name: DroppingContext
+  href: api/Loot.Context.DroppingContext.html#Loot_Context_DroppingContext__ctor_
+  commentId: Overload:Loot.Context.DroppingContext.#ctor
   isSpec: "True"
-  fullName: Loot.Context.BeforeDropContext.BeforeDropContext
-  nameWithType: BeforeDropContext.BeforeDropContext
-- uid: Loot.Context.BeforeDropContext.customDrops
-  name: customDrops
-  href: api/Loot.Context.BeforeDropContext.html#Loot_Context_BeforeDropContext_customDrops
-  commentId: F:Loot.Context.BeforeDropContext.customDrops
-  fullName: Loot.Context.BeforeDropContext.customDrops
-  nameWithType: BeforeDropContext.customDrops
-- uid: Loot.Context.BeforeDropContext.table
-  name: table
-  href: api/Loot.Context.BeforeDropContext.html#Loot_Context_BeforeDropContext_table
-  commentId: F:Loot.Context.BeforeDropContext.table
-  fullName: Loot.Context.BeforeDropContext.table
-  nameWithType: BeforeDropContext.table
-- uid: Loot.Context.DropContext
-  name: DropContext
-  href: api/Loot.Context.DropContext.html
-  commentId: T:Loot.Context.DropContext
-  fullName: Loot.Context.DropContext
-  nameWithType: DropContext
-- uid: Loot.Context.DropContext.#ctor
-  name: DropContext()
-  href: api/Loot.Context.DropContext.html#Loot_Context_DropContext__ctor
-  commentId: M:Loot.Context.DropContext.#ctor
-  fullName: Loot.Context.DropContext.DropContext()
-  nameWithType: DropContext.DropContext()
-- uid: Loot.Context.DropContext.#ctor(Loot.Bag)
-  name: DropContext(Bag)
-  href: api/Loot.Context.DropContext.html#Loot_Context_DropContext__ctor_Loot_Bag_
-  commentId: M:Loot.Context.DropContext.#ctor(Loot.Bag)
-  fullName: Loot.Context.DropContext.DropContext(Loot.Bag)
-  nameWithType: DropContext.DropContext(Bag)
-- uid: Loot.Context.DropContext.#ctor*
-  name: DropContext
-  href: api/Loot.Context.DropContext.html#Loot_Context_DropContext__ctor_
-  commentId: Overload:Loot.Context.DropContext.#ctor
-  isSpec: "True"
-  fullName: Loot.Context.DropContext.DropContext
-  nameWithType: DropContext.DropContext
-- uid: Loot.Context.DropContext.droppedBag
-  name: droppedBag
-  href: api/Loot.Context.DropContext.html#Loot_Context_DropContext_droppedBag
-  commentId: F:Loot.Context.DropContext.droppedBag
-  fullName: Loot.Context.DropContext.droppedBag
-  nameWithType: DropContext.droppedBag
+  fullName: Loot.Context.DroppingContext.DroppingContext
+  nameWithType: DroppingContext.DroppingContext
+- uid: Loot.Context.DroppingContext.Drops
+  name: Drops
+  href: api/Loot.Context.DroppingContext.html#Loot_Context_DroppingContext_Drops
+  commentId: F:Loot.Context.DroppingContext.Drops
+  fullName: Loot.Context.DroppingContext.Drops
+  nameWithType: DroppingContext.Drops
+- uid: Loot.Context.DroppingContext.Table
+  name: Table
+  href: api/Loot.Context.DroppingContext.html#Loot_Context_DroppingContext_Table
+  commentId: F:Loot.Context.DroppingContext.Table
+  fullName: Loot.Context.DroppingContext.Table
+  nameWithType: DroppingContext.Table
 - uid: Loot.Context.FilterContext
   name: FilterContext
   href: api/Loot.Context.FilterContext.html
@@ -424,12 +399,12 @@ references:
   commentId: T:Loot.Drop
   fullName: Loot.Drop
   nameWithType: Drop
-- uid: Loot.Drop.#ctor(UnityEngine.ScriptableObject,UnityEngine.Vector2Int,System.Int32,System.Int32,Loot.DropSettings)
-  name: Drop(ScriptableObject, Vector2Int, Int32, Int32, DropSettings)
-  href: api/Loot.Drop.html#Loot_Drop__ctor_UnityEngine_ScriptableObject_UnityEngine_Vector2Int_System_Int32_System_Int32_Loot_DropSettings_
-  commentId: M:Loot.Drop.#ctor(UnityEngine.ScriptableObject,UnityEngine.Vector2Int,System.Int32,System.Int32,Loot.DropSettings)
-  fullName: Loot.Drop.Drop(UnityEngine.ScriptableObject, UnityEngine.Vector2Int, System.Int32, System.Int32, Loot.DropSettings)
-  nameWithType: Drop.Drop(ScriptableObject, Vector2Int, Int32, Int32, DropSettings)
+- uid: Loot.Drop.#ctor
+  name: Drop()
+  href: api/Loot.Drop.html#Loot_Drop__ctor
+  commentId: M:Loot.Drop.#ctor
+  fullName: Loot.Drop.Drop()
+  nameWithType: Drop.Drop()
 - uid: Loot.Drop.#ctor*
   name: Drop
   href: api/Loot.Drop.html#Loot_Drop__ctor_
@@ -755,15 +730,15 @@ references:
   isSpec: "True"
   fullName: Loot.DropTable.Clone
   nameWithType: DropTable.Clone
-- uid: Loot.DropTable.CustomDrop(System.Action{Loot.Drop})
-  name: CustomDrop(Action<Drop>)
-  href: api/Loot.DropTable.html#Loot_DropTable_CustomDrop_System_Action_Loot_Drop__
-  commentId: M:Loot.DropTable.CustomDrop(System.Action{Loot.Drop})
-  name.vb: CustomDrop(Action(Of Drop))
-  fullName: Loot.DropTable.CustomDrop(System.Action<Loot.Drop>)
-  fullName.vb: Loot.DropTable.CustomDrop(System.Action(Of Loot.Drop))
-  nameWithType: DropTable.CustomDrop(Action<Drop>)
-  nameWithType.vb: DropTable.CustomDrop(Action(Of Drop))
+- uid: Loot.DropTable.CustomDrop(System.Int32,System.Func{System.Collections.Generic.List{Loot.Drop},Loot.Bag},System.Action{Loot.Context.DroppingContext},System.Action{Loot.Context.DroppedContext})
+  name: CustomDrop(Int32, Func<List<Drop>, Bag>, Action<DroppingContext>, Action<DroppedContext>)
+  href: api/Loot.DropTable.html#Loot_DropTable_CustomDrop_System_Int32_System_Func_System_Collections_Generic_List_Loot_Drop__Loot_Bag__System_Action_Loot_Context_DroppingContext__System_Action_Loot_Context_DroppedContext__
+  commentId: M:Loot.DropTable.CustomDrop(System.Int32,System.Func{System.Collections.Generic.List{Loot.Drop},Loot.Bag},System.Action{Loot.Context.DroppingContext},System.Action{Loot.Context.DroppedContext})
+  name.vb: CustomDrop(Int32, Func(Of List(Of Drop), Bag), Action(Of DroppingContext), Action(Of DroppedContext))
+  fullName: Loot.DropTable.CustomDrop(System.Int32, System.Func<System.Collections.Generic.List<Loot.Drop>, Loot.Bag>, System.Action<Loot.Context.DroppingContext>, System.Action<Loot.Context.DroppedContext>)
+  fullName.vb: Loot.DropTable.CustomDrop(System.Int32, System.Func(Of System.Collections.Generic.List(Of Loot.Drop), Loot.Bag), System.Action(Of Loot.Context.DroppingContext), System.Action(Of Loot.Context.DroppedContext))
+  nameWithType: DropTable.CustomDrop(Int32, Func<List<Drop>, Bag>, Action<DroppingContext>, Action<DroppedContext>)
+  nameWithType.vb: DropTable.CustomDrop(Int32, Func(Of List(Of Drop), Bag), Action(Of DroppingContext), Action(Of DroppedContext))
 - uid: Loot.DropTable.CustomDrop*
   name: CustomDrop
   href: api/Loot.DropTable.html#Loot_DropTable_CustomDrop_
@@ -784,19 +759,6 @@ references:
   isSpec: "True"
   fullName: Loot.DropTable.CustomEnumerator
   nameWithType: DropTable.CustomEnumerator
-- uid: Loot.DropTable.DeepEquals(Loot.DropTable)
-  name: DeepEquals(DropTable)
-  href: api/Loot.DropTable.html#Loot_DropTable_DeepEquals_Loot_DropTable_
-  commentId: M:Loot.DropTable.DeepEquals(Loot.DropTable)
-  fullName: Loot.DropTable.DeepEquals(Loot.DropTable)
-  nameWithType: DropTable.DeepEquals(DropTable)
-- uid: Loot.DropTable.DeepEquals*
-  name: DeepEquals
-  href: api/Loot.DropTable.html#Loot_DropTable_DeepEquals_
-  commentId: Overload:Loot.DropTable.DeepEquals
-  isSpec: "True"
-  fullName: Loot.DropTable.DeepEquals
-  nameWithType: DropTable.DeepEquals
 - uid: Loot.DropTable.Description
   name: Description
   href: api/Loot.DropTable.html#Loot_DropTable_Description
@@ -810,15 +772,12 @@ references:
   isSpec: "True"
   fullName: Loot.DropTable.Description
   nameWithType: DropTable.Description
-- uid: Loot.DropTable.Drop(System.Action{Loot.Context.BeforeDropContext},System.Func{System.Collections.Generic.List{Loot.Drop},Loot.Bag},System.Action{Loot.Context.AfterDropContext},System.Boolean)
-  name: Drop(Action<BeforeDropContext>, Func<List<Drop>, Bag>, Action<AfterDropContext>, Boolean)
-  href: api/Loot.DropTable.html#Loot_DropTable_Drop_System_Action_Loot_Context_BeforeDropContext__System_Func_System_Collections_Generic_List_Loot_Drop__Loot_Bag__System_Action_Loot_Context_AfterDropContext__System_Boolean_
-  commentId: M:Loot.DropTable.Drop(System.Action{Loot.Context.BeforeDropContext},System.Func{System.Collections.Generic.List{Loot.Drop},Loot.Bag},System.Action{Loot.Context.AfterDropContext},System.Boolean)
-  name.vb: Drop(Action(Of BeforeDropContext), Func(Of List(Of Drop), Bag), Action(Of AfterDropContext), Boolean)
-  fullName: Loot.DropTable.Drop(System.Action<Loot.Context.BeforeDropContext>, System.Func<System.Collections.Generic.List<Loot.Drop>, Loot.Bag>, System.Action<Loot.Context.AfterDropContext>, System.Boolean)
-  fullName.vb: Loot.DropTable.Drop(System.Action(Of Loot.Context.BeforeDropContext), System.Func(Of System.Collections.Generic.List(Of Loot.Drop), Loot.Bag), System.Action(Of Loot.Context.AfterDropContext), System.Boolean)
-  nameWithType: DropTable.Drop(Action<BeforeDropContext>, Func<List<Drop>, Bag>, Action<AfterDropContext>, Boolean)
-  nameWithType.vb: DropTable.Drop(Action(Of BeforeDropContext), Func(Of List(Of Drop), Bag), Action(Of AfterDropContext), Boolean)
+- uid: Loot.DropTable.Drop(System.Int32)
+  name: Drop(Int32)
+  href: api/Loot.DropTable.html#Loot_DropTable_Drop_System_Int32_
+  commentId: M:Loot.DropTable.Drop(System.Int32)
+  fullName: Loot.DropTable.Drop(System.Int32)
+  nameWithType: DropTable.Drop(Int32)
 - uid: Loot.DropTable.Drop*
   name: Drop
   href: api/Loot.DropTable.html#Loot_DropTable_Drop_
@@ -884,42 +843,48 @@ references:
   isSpec: "True"
   fullName: Loot.DropTable.MultipleDrop
   nameWithType: DropTable.MultipleDrop
-- uid: Loot.DropTable.OnDrop
-  name: OnDrop
-  href: api/Loot.DropTable.html#Loot_DropTable_OnDrop
-  commentId: E:Loot.DropTable.OnDrop
-  fullName: Loot.DropTable.OnDrop
-  nameWithType: DropTable.OnDrop
-- uid: Loot.DropTable.OnFiltered
-  name: OnFiltered
-  href: api/Loot.DropTable.html#Loot_DropTable_OnFiltered
-  commentId: E:Loot.DropTable.OnFiltered
-  fullName: Loot.DropTable.OnFiltered
-  nameWithType: DropTable.OnFiltered
+- uid: Loot.DropTable.OnDropped
+  name: OnDropped
+  href: api/Loot.DropTable.html#Loot_DropTable_OnDropped
+  commentId: E:Loot.DropTable.OnDropped
+  fullName: Loot.DropTable.OnDropped
+  nameWithType: DropTable.OnDropped
+- uid: Loot.DropTable.OnDropping
+  name: OnDropping
+  href: api/Loot.DropTable.html#Loot_DropTable_OnDropping
+  commentId: E:Loot.DropTable.OnDropping
+  fullName: Loot.DropTable.OnDropping
+  nameWithType: DropTable.OnDropping
 - uid: Loot.DropTable.OnGlobalModified
   name: OnGlobalModified
   href: api/Loot.DropTable.html#Loot_DropTable_OnGlobalModified
-  commentId: E:Loot.DropTable.OnGlobalModified
+  commentId: F:Loot.DropTable.OnGlobalModified
   fullName: Loot.DropTable.OnGlobalModified
   nameWithType: DropTable.OnGlobalModified
 - uid: Loot.DropTable.OnGlobalModify
   name: OnGlobalModify
   href: api/Loot.DropTable.html#Loot_DropTable_OnGlobalModify
-  commentId: E:Loot.DropTable.OnGlobalModify
+  commentId: F:Loot.DropTable.OnGlobalModify
   fullName: Loot.DropTable.OnGlobalModify
   nameWithType: DropTable.OnGlobalModify
 - uid: Loot.DropTable.OnLocalModified
   name: OnLocalModified
   href: api/Loot.DropTable.html#Loot_DropTable_OnLocalModified
-  commentId: E:Loot.DropTable.OnLocalModified
+  commentId: F:Loot.DropTable.OnLocalModified
   fullName: Loot.DropTable.OnLocalModified
   nameWithType: DropTable.OnLocalModified
 - uid: Loot.DropTable.OnLocalModify
   name: OnLocalModify
   href: api/Loot.DropTable.html#Loot_DropTable_OnLocalModify
-  commentId: E:Loot.DropTable.OnLocalModify
+  commentId: F:Loot.DropTable.OnLocalModify
   fullName: Loot.DropTable.OnLocalModify
   nameWithType: DropTable.OnLocalModify
+- uid: Loot.DropTable.OnTableFilter
+  name: OnTableFilter
+  href: api/Loot.DropTable.html#Loot_DropTable_OnTableFilter
+  commentId: E:Loot.DropTable.OnTableFilter
+  fullName: Loot.DropTable.OnTableFilter
+  nameWithType: DropTable.OnTableFilter
 - uid: Loot.DropTable.PercentageCalculation
   name: PercentageCalculation
   href: api/Loot.DropTable.html#Loot_DropTable_PercentageCalculation
@@ -946,12 +911,34 @@ references:
   isSpec: "True"
   fullName: Loot.DropTable.RawEnumerator
   nameWithType: DropTable.RawEnumerator
+- uid: Loot.DropTable.RemoveAllTableFilters
+  name: RemoveAllTableFilters()
+  href: api/Loot.DropTable.html#Loot_DropTable_RemoveAllTableFilters
+  commentId: M:Loot.DropTable.RemoveAllTableFilters
+  fullName: Loot.DropTable.RemoveAllTableFilters()
+  nameWithType: DropTable.RemoveAllTableFilters()
+- uid: Loot.DropTable.RemoveAllTableFilters*
+  name: RemoveAllTableFilters
+  href: api/Loot.DropTable.html#Loot_DropTable_RemoveAllTableFilters_
+  commentId: Overload:Loot.DropTable.RemoveAllTableFilters
+  isSpec: "True"
+  fullName: Loot.DropTable.RemoveAllTableFilters
+  nameWithType: DropTable.RemoveAllTableFilters
 - uid: Loot.DropTable.RemoveDrop(Loot.Drop)
   name: RemoveDrop(Drop)
   href: api/Loot.DropTable.html#Loot_DropTable_RemoveDrop_Loot_Drop_
   commentId: M:Loot.DropTable.RemoveDrop(Loot.Drop)
   fullName: Loot.DropTable.RemoveDrop(Loot.Drop)
   nameWithType: DropTable.RemoveDrop(Drop)
+- uid: Loot.DropTable.RemoveDrop(System.Predicate{Loot.Drop})
+  name: RemoveDrop(Predicate<Drop>)
+  href: api/Loot.DropTable.html#Loot_DropTable_RemoveDrop_System_Predicate_Loot_Drop__
+  commentId: M:Loot.DropTable.RemoveDrop(System.Predicate{Loot.Drop})
+  name.vb: RemoveDrop(Predicate(Of Drop))
+  fullName: Loot.DropTable.RemoveDrop(System.Predicate<Loot.Drop>)
+  fullName.vb: Loot.DropTable.RemoveDrop(System.Predicate(Of Loot.Drop))
+  nameWithType: DropTable.RemoveDrop(Predicate<Drop>)
+  nameWithType.vb: DropTable.RemoveDrop(Predicate(Of Drop))
 - uid: Loot.DropTable.RemoveDrop*
   name: RemoveDrop
   href: api/Loot.DropTable.html#Loot_DropTable_RemoveDrop_
@@ -1056,6 +1043,12 @@ references:
   commentId: F:Loot.Enum.Filter.DontInvokeTableFilter
   fullName: Loot.Enum.Filter.DontInvokeTableFilter
   nameWithType: Filter.DontInvokeTableFilter
+- uid: Loot.Enum.Filter.DontRemoveRepetitions
+  name: DontRemoveRepetitions
+  href: api/Loot.Enum.Filter.html#Loot_Enum_Filter_DontRemoveRepetitions
+  commentId: F:Loot.Enum.Filter.DontRemoveRepetitions
+  fullName: Loot.Enum.Filter.DontRemoveRepetitions
+  nameWithType: Filter.DontRemoveRepetitions
 - uid: Loot.Enum.Filter.IncludeExtensions
   name: IncludeExtensions
   href: api/Loot.Enum.Filter.html#Loot_Enum_Filter_IncludeExtensions

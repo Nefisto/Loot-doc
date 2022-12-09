@@ -240,6 +240,7 @@ private bool MyFilterRule (Drop drop)
 <ul>
 <li>Include all drops that isn&#39;t hidden nor extensions</li>
 <li>Open all extension drops until we have none of them OR have reach at max depth, this maximum can be changed on <a href="./../api/Loot.LootSettings.html">Loot.Settings</a></li>
+<li>While opening extensions <strong>skip</strong> tables that are already added (check repetition by table reference)</li>
 <li>Remove all drops marked as <a href="overview.html#hidden">hidden</a></li>
 <li>Clone all drops and</li>
 <li>Apply all the modifiers and filter</li>
@@ -250,10 +251,11 @@ private bool MyFilterRule (Drop drop)
     // Do something...
 }
 </code></pre><h4 id="raw-enumerator">Raw enumerator</h4>
-<p>A sugar to give you the <strong>original</strong> plain drops, as you see them in the drop table inspector</p>
+<p>A sugar to give you a copy of your drops as you see them in the drop table inspector</p>
 <ul>
-<li>Include <strong>all ORIGINAL</strong> drops, which means that changes here will be permanent</li>
+<li>Included drops still a cloned version of original drops</li>
 <li>Do not open extensions, so will your receive just the properly extension drop</li>
+<li>As we don&#39;t open extensions we check for repetitions</li>
 <li>Include hidden drops</li>
 <li>Does <strong>NOT</strong> apply any modifier or filter</li>
 </ul>

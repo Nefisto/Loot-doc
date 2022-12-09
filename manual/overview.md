@@ -19,6 +19,15 @@ Those classes above you, probably, will change thought the inspector to setup yo
 
 ---
 
+### Dropping
+
+You can ask for drop through two different APIs
+
+1. [Drop](./../api/Loot.DropTable.html#Loot_DropTable_Drop_System_Int32_): The easiest way, this will give your a result bag based on your table configuration, you can ask for multiple drops changing the value of N
+2. [Custom drop](Loot.DropTable.html#Loot_DropTable_CustomDrop_System_Int32_System_Func_System_Collections_Generic_List_Loot_Drop__Loot_Bag__System_Action_Loot_Context_DroppingContext__System_Action_Loot_Context_DroppedContext__): Here you can specify custom behaviors for multiple purpose, like getting the whole control about how drops happen providing a ```Func<List<Drop>, Bag>```, overwrite the `OnDropping` and `OnDropped` from table passing new callbacks through `beforeDropCallback` and `afterDropCallback`. The modifiers and filter will still being applied
+
+---
+
 ### Modifier / Filter
 
 We need to be able to modify and filter the drops at runtime. **Loot** has some events exposed to allow you to control the final outcome of a table, those events run in a specific order, let's see this order and then talk a little about each of them.
@@ -246,9 +255,9 @@ foreach (var drop in monsterTable)
 
 #### Raw enumerator
 
-A sugar to give you the **original** plain drops, as you see them in the drop table inspector
+A sugar to give you a copy of your drops as you see them in the drop table inspector
 
-* Include **all ORIGINAL** drops, which means that changes here will be permanent
+* Included drops still a cloned version of original drops
 * Do not open extensions, so will your receive just the properly extension drop
 * As we don't open extensions we check for repetitions
 * Include hidden drops
